@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonatan Marques - Projetos</title>
+    <style>
+        * {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            color: rgb(0, 0, 0, 0.7);
+        }
+
+        h3 {
+            margin: 0 0 16px 0;
+            color: rgb(0, 0, 0, 0.6);
+        }
+
+        body {
+            padding: 40px;
+            margin: 0px;
+            background-color: #DEDEDE;
+        }
+
+        .geral {
+            display: grid;
+            grid-template-columns: 290px 1fr;
+            grid-column-gap: 24px;
+            grid-row-gap: 24px;
+        }
+
+        /* IMAGEM PERFIL - NOME - HABILIDADES */
+        .perfil {
+            grid-area: 1 / 1 / 2 / 2;
+            padding: 32px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: white;
+        }
+
+        .perfil img {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+        }
+
+        .perfil .borda-img {
+            width: 128px;
+            height: 128px;
+            padding: 2px;
+            border-width: 3px;
+            border-style: solid;
+            border-radius: 50%;
+            border-color: rgb(0, 0, 0, 0.7);
+        }
+
+        .links {
+            width: 100%;
+        }
+
+        .links div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .proj-react {
+            grid-area: 1 / 2 / 2 / 3;
+            padding: 0px 16px;
+            background-color: #ECECEC;
+        }
+
+        .proj-react div {
+            padding: 16px;
+            background-color: white;
+        }
+
+        .proj-js {
+            grid-area: 2 / 2 / 3 / 3;
+            padding: 16px;
+            background-color: #ECECEC;
+        }
+
+        .proj-js div {
+            padding: 16px;
+            background-color: white;
+        }
+
+        .repos {
+            grid-area: 3 / 2 / 4 / 3;
+            padding: 16px;
+            background-color: #ECECEC;
+        }
+
+        .repos div {
+            padding: 16px;
+            background-color: white;
+        }
+
+        .border {
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 4px -2px #989898;
+            -moz-box-shadow: 0 4px 4px -2px #989898;
+            -webkit-box-shadow: 0 4px 4px -2px #989898;
+            /* border: 2px solid red; */
+            padding: 15px;
+            border-radius: 7px;
+        }
+
+        @media (max-width: 850px) {
+            body {
+                padding: 20px;
+            }
+
+            .geral {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-column-gap: 24px;
+                grid-row-gap: 24px;
+            }
+
+            .perfil {
+                grid-area: 1 / 1 / 2 / 2;
+            }
+
+            .proj-react {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+
+            .proj-js {
+                grid-area: 3 / 1 / 4 / 2;
+            }
+
+            .repos {
+                grid-area: 4 / 1 / 5 / 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="geral">
+        <div class="perfil border">
+            <div class="borda-img"><img src="perfil.jpg" alt=""></div>
+            <div>
+                <h1>Jonatan Marques</h1>
+            </div>
+            <div>
+                <p>⚡ JavaScript | Node.js | React ⚡</p>
+            </div>
+            <div class="links">
+                <div>
+                    <div>GitHub</div>
+                    <div><a target="_blank" href="https://github.com/devjonatanm">@devjonatanm</a></div>
+                </div>
+                <div>
+                    <div>Instagram</div>
+                    <div><a target="_blank" href="https://www.instagram.com/devjonatanm/">@devjonatanm</a></div>
+                </div>
+                <div>
+                    <div>LinkedIn</div>
+                    <div><a target="_blank" href="https://www.linkedin.com/in/devjonatanm/">@devjonatanm</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="proj-react border">
+            <h3>GitHub Projects React.js</h3>
+            <div>
+                <div class="alinha-centro">
+                    <a href="https://github.com/devjonatanm/AuthentFirebaseReactJS">
+                        AuthentFirebaseReactJS
+                    </a>
+                </div>
+                <div class="alinha-centro">
+                    <a href="https://github.com/devjonatanm/BuscaCepReactJS">
+                        BuscaCepReactJS
+                    </a>
+                </div>
+                <div class="alinha-centro">
+                    <a href="https://github.com/devjonatanm/CalculatorReactJS">
+
+                        CalculatorReactJS
+                    </a>
+                </div>
+                <div class="alinha-centro">
+                    <a href="https://github.com/devjonatanm/CryptoReactJS">
+                        CryptoReactJS
+                    </a>
+                </div>
+                <div class="alinha-centro">
+                    <a href="https://github.com/devjonatanm/RandomPersonReactJS">
+                        RandomPersonReactJS
+                    </a>
+                </div>
+                <div class="alinha-centro">
+                    <a href="https://github.com/devjonatanm/VerificaUsuarioGitReactJS">
+                        VerificaUsuarioGitReactJS
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="proj-js border">
+            <h3>GitHub Projects Javascript</h3>
+            <div>
+                <div class="alinha-centro">
+                    <a href="/LABOR/projects-js/CrudClientJS/index.html">
+                        CrudClientJS
+                    </a>
+                </div>
+
+                <div class="alinha-centro">
+                    <a href="/LABOR/projects-js/OurMenuJS/index.html">
+                        OurMenuJS
+                    </a>
+                </div>
+
+                <div class="alinha-centro">
+                    <a href="/LABOR/projects-js/BateriaTecladoJS/index.html">
+                        BateriaTecladoJS
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="repos border">
+            <h3>GitHub Repositórios</h3>
+            <div id="repo-js"></div>
+        </div>
+    </div>
+
+    <script>
+        async function repositorioNoGithub() {
+            try {
+                const response = await fetch('https://api.github.com/users/devjonatanm/repos');
+                const body = await response.json();
+                return body;
+            } catch (err) {
+                console.log(err);
+            } finally {
+                //console.log('deu');
+            }
+        }
+
+        repositorioNoGithub().then((apigit) => {
+            console.log(apigit)
+
+            let juntando = ``
+            for (let i = 0; i < apigit.length; i++) {
+                if (apigit[i].homepage === "" || apigit[i].homepage === null) {
+                    juntando += `<p>${i + 1} - <a target="_blank" href="https://github.com/${apigit[i].full_name}">${apigit[i].name}</a></p>`;
+                } else {
+                    juntando += `<p>${i + 1} - <a target="_blank" href="https://github.com/${apigit[i].full_name}">${apigit[i].name}</a> - 
+                    <a target="_blank" href="${apigit[i].homepage}"> [Acessar Website]</a></p>`;
+                }
+            }
+            let el = document.querySelector("#repo-js");
+            el.innerHTML = juntando;
+
+        });
+    </script>
+</body>
+
+</html>
