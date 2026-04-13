@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Personal Trainer | Alta Performance & Biomecânica</title>
+<meta name="description" content="Consultoria fitness de elite em Porto Alegre. Resultados reais através da ciência.">
+<link rel="icon" type="image/png" href="https://jmswebsolutions.github.io/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--p:#ff5e14;--b:#0a0a0b;--c:#141416;--t:#ffffff;--m:#a1a1aa}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif;scroll-behavior:smooth}
+body{background-color:var(--b);color:var(--t);line-height:1.6;overflow-x:hidden;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+header{padding:0 7%;height:85px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,11,0.98);position:fixed;width:100%;top:0;z-index:1000;border-bottom:2px solid var(--p);backdrop-filter:blur(12px)}
+.logo{font-family:'Oswald',sans-serif;font-size:1.6rem;text-transform:uppercase;letter-spacing:1px}.logo span{color:var(--p)}
+.nav-links{display:flex;align-items:center}.nav-links a{color:#fff;text-decoration:none!important;margin-left:25px;font-weight:600;font-size:0.85rem;text-transform:uppercase;transition:0.3s;letter-spacing:0.5px}.nav-links a:hover{color:var(--p)}
+.m-t{display:none;color:var(--p);font-size:1.6rem;cursor:pointer}
+.hero{height:90vh;background:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.65)),url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop');background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 7%}
+.hero h1{font-family:'Oswald',sans-serif;font-size:clamp(3rem,10vw,5.5rem);text-transform:uppercase;line-height:1;margin-bottom:25px;letter-spacing:-1px}.hero h1 span{color:var(--p)}
+.btn{background:var(--p);color:#fff!important;padding:20px 45px;text-decoration:none!important;font-weight:800;border-radius:2px;display:inline-block;text-transform:uppercase;transition:0.4s;border:none;cursor:pointer;letter-spacing:1px}
+.btn:hover{transform:scale(1.05);box-shadow:0 0 30px rgba(255,94,20,0.5)}
+section{padding:110px 7%}.s-t{text-align:center;margin-bottom:70px}.s-t h2{font-family:'Oswald',sans-serif;font-size:3.2rem;text-transform:uppercase;letter-spacing:1px}
+.p-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+.p-c{background:var(--c);padding:60px 40px;border-radius:4px;border:1px solid #1f1f22;text-align:center;transition:0.4s}.p-c:hover{border-color:var(--p);background:#1a1a1d;transform:translateY(-10px)}
+.p-c h3{font-family:'Oswald',sans-serif;font-size:2.2rem;margin-bottom:15px;color:var(--p)}
+.price{font-size:3.5rem;font-weight:800;display:block;margin-bottom:25px;font-family:'Oswald'}
+.c-a{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:stretch}
+.f-c{background:var(--c);padding:50px;border-radius:4px;border:1px solid #1f1f22}
+.f-c input,.f-c select{width:100%;padding:18px;margin-bottom:20px;background:#050505;border:1px solid #333;color:#fff;outline:none}
+.m-w{border-radius:4px;overflow:hidden;border:1px solid #222;height:100%;display:flex;flex-direction:column}
+.addr-b{background:#111113;padding:30px;border-top:3px solid var(--p)}
+.addr-b p{font-size:0.95rem;color:var(--m);margin-bottom:10px;display:flex;align-items:center}.addr-b i{color:var(--p);margin-right:15px;font-size:1.2rem}
+.w-f{position:fixed;bottom:35px;right:35px;background:#25d366;width:65px;height:65px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:35px;color:#fff!important;z-index:2000;text-decoration:none!important;animation:pulse-wpp 2s infinite;box-shadow:0 0 20px rgba(37,211,102,0.4)}
+@keyframes pulse-wpp{0%{transform:scale(0.9);box-shadow:0 0 0 0 rgba(37,211,102,0.7)}70%{transform:scale(1);box-shadow:0 0 0 20px rgba(37,211,102,0)}100%{transform:scale(0.9)}}
+footer{padding:80px 7% 40px;background:#050505;text-align:center;border-top:1px solid #1a1a1d}
+.f-i{margin-top:30px;font-size:0.85rem;color:var(--m);letter-spacing:1px}
+.f-i a{color:var(--p);text-decoration:none!important;font-weight:800;border-bottom:1px solid transparent;transition:0.3s}
+.f-i a:hover{border-bottom-color:var(--p)}
+@media (max-width:992px){.m-t{display:block}.nav-links{position:fixed;top:85px;left:-100%;width:100%;height:100vh;background:var(--b);flex-direction:column;padding-top:60px;transition:0.5s}.nav-links.active{left:0}.nav-links a{margin:25px 0;font-size:1.5rem}.c-a{grid-template-columns:1fr}}
+</style>
+</head>
+<body oncontextmenu="return false" onkeydown="return false">
+
+<header>
+<div class="logo">TRAINER<span>PRO</span></div>
+<div class="m-t" id="bt_m"><i class="fas fa-bars"></i></div>
+<nav class="nav-links" id="nv_l">
+<a href="#inicio">Início</a>
+<a href="#planos">Planos</a>
+<a href="#contato">Contato</a>
+</nav>
+</header>
+
+<section class="hero" id="inicio">
+<h1>MOLDANDO <span>CAMPEÕES.</span></h1>
+<p style="max-width:750px;margin-bottom:45px;font-size:1.25rem;color:var(--m)">Treinamento de alta performance para quem não aceita o comum. Biomecânica aplicada à sua evolução estética.</p>
+<a href="#contato" class="btn">Solicitar Avaliação</a>
+</section>
+
+<section id="planos">
+<div class="s-t"><h2>Consultorias</h2></div>
+<div class="p-g">
+<div class="p-c">
+<h3>Digital</h3>
+<span class="price">R$ 149</span>
+<p style="color:var(--m)">Protocolo completo via App, suporte 24h e vídeos explicativos.</p>
+</div>
+<div class="p-c" style="border-color:var(--p);background:#0e0e0f">
+<h3>Premium</h3>
+<span class="price">R$ 399</span>
+<p style="color:var(--m)">Acompanhamento presencial focado em correções milimétricas.</p>
+</div>
+</div>
+</section>
+
+<section id="contato" style="background:#080809">
+<div class="c-a">
+<div class="f-c">
+<h3 style="font-family:'Oswald';margin-bottom:30px;text-transform:uppercase;color:var(--p);font-size:1.8rem">Inicie sua Jornada</h3>
+<form onsubmit="return false">
+<input type="text" placeholder="Nome Completo" required>
+<input type="tel" placeholder="Seu WhatsApp" required>
+<select required>
+<option value="" disabled selected>Qual seu foco?</option>
+<option>Hipertrofia Máxima</option>
+<option>Definição Extrema</option>
+<option>Performance Atleta</option>
+</select>
+<button class="btn" style="width:100%">Enviar Pedido</button>
+</form>
+</div>
+<div class="m-w">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110550.320490159!2d-51.250394!3d-30.0118501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977fd4668ea5b%3A0x280e87d095908f51!2sPorto%20Alegre%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr6" width="100%" height="400" style="border:0;flex-grow:1" allowfullscreen="" loading="lazy"></iframe>
+<div class="addr-b">
+<p><i class="fas fa-location-dot"></i> Av. Nilo Peçanha, 1500 - Três Figueiras, Porto Alegre - RS</p>
+<p><i class="fas fa-phone"></i> (51) 99134-5607</p>
+<p><i class="fas fa-clock"></i> 06:00 - 22:00 (Seg-Sex)</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="logo" style="font-size:2rem">TRAINER<span>PRO</span></div>
+<div class="f-i">
+© 2026 Porto Alegre/RS. <br>
+DESENVOLVIDO POR <a href="https://jmswebsolutions.github.io/" target="_blank">JMS WEB SOLUTIONS</a>
+</div>
+</footer>
+
+<a href="https://wa.me/5551991345607" class="w-f" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+(function(){
+const _b=document.getElementById('bt_m');const _l=document.getElementById('nv_l');const _i=document.querySelectorAll('.nav-links a');
+_b.addEventListener('click',()=>{_l.classList.toggle('active');_b.querySelector('i').classList.toggle('fa-bars');_b.querySelector('i').classList.toggle('fa-times')});
+_i.forEach(e=>{e.addEventListener('click',()=>{_l.classList.remove('active');_b.querySelector('i').classList.add('fa-bars');_b.querySelector('i').classList.remove('fa-times')})});
+document.addEventListener('keydown',e=>{if(e.ctrlKey&&(e.key==='u'||e.key==='s'||e.key==='c'||e.key==='i')||e.keyCode===123)e.preventDefault()});
+document.addEventListener('mousedown',e=>{if(e.button===2)e.preventDefault()});
+})();
+</script>
+</body>
+</html>

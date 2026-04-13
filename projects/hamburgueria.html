@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burger Master | O Burger Monstro Artesanal</title>
+<meta name="description" content="O melhor hambúrguer artesanal com blend de 180g e ingredientes selecionados.">
+<link rel="icon" type="image/png" href="https://jmswebsolutions.github.io/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body,html{background:#0a0a0a;margin:0;height:100vh;overflow:hidden;-webkit-user-select:none;user-select:none}
+#jms-app-core{opacity:0;transition:opacity 0.8s ease-in}
+#burger-loader{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#121212;color:#f37021;font-family:'Bangers',cursive}
+.fire-spin{font-size:3.5rem;animation:s 1.2s infinite linear}
+@keyframes s{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+</style>
+</head>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+<div id="burger-loader"><i class="fas fa-fire-alt fire-spin"></i><p style="margin-top:20px;letter-spacing:6px;font-size:10px;font-family:sans-serif;color:#fff">JMS CORE PROTECTED</p></div>
+<div id="jms-app-core"></div>
+<script>
+const _0xBURGER = `
+<style>
+:root{--p:#f37021;--s:#e31b23;--d:#121212;--bg:#0a0a0a;--w:#fff}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;scroll-behavior:smooth}
+header{padding:0 7%;height:85px;background:rgba(10,10,10,0.98);position:fixed;top:0;width:100%;z-index:999;display:flex;justify-content:space-between;align-items:center;border-bottom:4px solid var(--p)}
+.l{font-family:'Bangers';font-size:2rem;color:var(--p);letter-spacing:3px}.l span{color:var(--w)}
+.n a{color:var(--w);text-decoration:none;font-weight:900;margin-left:30px;font-size:12px;text-transform:uppercase;letter-spacing:1px;transition:.3s}
+.n a:hover{color:var(--p);text-shadow:0 0 10px var(--p)}
+.h{height:95vh;background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.4)),url('https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=1472&auto=format&fit=crop');background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 7%;border-bottom:10px solid var(--p)}
+.h h1{font-family:'Bangers';font-size:clamp(3.5rem,12vw,7rem);color:var(--w);line-height:0.9;margin-bottom:10px;text-shadow:5px 5px 0 var(--s)}
+.h h1 span{color:var(--p);display:block}
+.h p{font-size:1.4rem;font-weight:900;color:var(--w);text-transform:uppercase;letter-spacing:4px;margin-bottom:40px;background:var(--s);padding:5px 20px}
+.btn{background:var(--p);color:var(--w);padding:22px 50px;text-decoration:none;font-weight:900;border-radius:0;text-transform:uppercase;transition:.3s;font-size:1.2rem;clip-path:polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)}
+.btn:hover{background:var(--w);color:var(--bg);transform:scale(1.05)}
+section{padding:100px 7%;background:var(--bg)}
+.t{text-align:center;margin-bottom:80px}
+.t h2{font-family:'Bangers';font-size:4rem;color:var(--p);letter-spacing:5px}
+.gr{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px}
+.sc{background:var(--d);border-radius:20px;overflow:hidden;border:2px solid #222;transition:.4s}
+.sc:hover{border-color:var(--p);transform:translateY(-15px);box-shadow:0 20px 40px rgba(243,112,33,0.1)}
+.sc-img{width:100%;height:250px;object-fit:cover;border-bottom:4px solid var(--p)}
+.sc-info{padding:30px}
+.sc-info h3{font-family:'Bangers';font-size:2.2rem;color:var(--p);margin-bottom:10px}
+.sc-info p{color:#888;font-size:0.9rem;margin-bottom:20px;height:40px}
+.price{font-weight:900;font-size:1.8rem;color:var(--w);display:block}
+.loc-area{display:grid;grid-template-columns:1fr 1fr;background:var(--d);border:4px solid var(--p)}
+.adr-p{padding:60px;display:flex;flex-direction:column;justify-content:center}
+.adr-p h3{font-family:'Bangers';font-size:2.5rem;color:var(--p);margin-bottom:20px}
+.adr-p p{font-weight:700;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px}
+.mf{height:500px;width:100%;border:0;filter:grayscale(1) invert(0.9) contrast(1.5)}
+.wa{position:fixed;bottom:35px;right:35px;background:#25d366;width:70px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:35px;color:#fff!important;z-index:9999;animation:fire 0.8s infinite alternate;text-decoration:none}
+@keyframes fire{from{box-shadow:0 0 10px #25d366}to{box-shadow:0 0 30px #25d366, 0 0 50px rgba(37,211,102,0.3)}}
+.tg{display:none;color:var(--p);font-size:2.5rem;cursor:pointer}
+footer{padding:60px 7%;text-align:center;background:#000;border-top:2px solid var(--d)}
+footer a{color:var(--p)!important;text-decoration:none;font-weight:900;border-bottom:2px solid var(--p)}
+@media (max-width:992px){.loc-area{grid-template-columns:1fr}.tg{display:block}.n{display:none;position:absolute;top:85px;left:0;width:100%;background:var(--bg);padding:40px;flex-direction:column;gap:30px;text-align:center;border-bottom:4px solid var(--p)}.n.act{display:flex}}
+</style>
+<header>
+<div class="l">BURGER<span>MASTER</span></div>
+<div class="tg" onclick="tk()"><i class="fas fa-utensils"></i></div>
+<nav class="n" id="nv">
+<a href="#" onclick="tk()">Home</a>
+<a href="#menu" onclick="tk()">Cardápio</a>
+<a href="#loc" onclick="tk()">Onde Estamos</a>
+</nav>
+</header>
+<div class="h">
+<h1>O BURGER <span>MONSTRO.</span></h1>
+<p>O Sabor Que Você Respeita</p>
+<a href="https://wa.me/5551991345607" class="btn">Quero Meu Burger</a>
+</div>
+<section id="menu">
+<div class="t"><h2>Nossas Feras</h2></div>
+<div class="gr">
+<div class="sc">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600" class="sc-img">
+<div class="sc-info">
+<h3>Bacon Supreme</h3>
+<p>Blend Bovino 180g, Triplo Bacon, Cheddar Inglês e Maionese de Defumada.</p>
+<span class="price">R$ 42,90</span>
+</div>
+</div>
+<div class="sc">
+<img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=600" class="sc-img">
+<div class="sc-info">
+<h3>Cheddar Flood</h3>
+<p>Cascata de Cheddar derretido, Cebola no Shoyu e Pão de Brioche Tostado.</p>
+<span class="price">R$ 39,90</span>
+</div>
+</div>
+<div class="sc">
+<img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=600" class="sc-img">
+<div class="sc-info">
+<h3>Double Monster</h3>
+<p>Dois Blends de 180g, Queijo Dobrado, Picles da Casa e muito Molho Master.</p>
+<span class="price">R$ 54,00</span>
+</div>
+</div>
+</div>
+</section>
+<div id="loc" style="padding:0 7% 100px">
+<div class="loc-area">
+<div class="adr-p">
+<h3>ESTAMOS NA RUA!</h3>
+<p><i class="fas fa-map-marker-alt" style="color:var(--p)"></i> AV. INDUSTRIAL MASTER, 450</p>
+<p>DISTRITO GASTRONÔMICO — PORTO ALEGRE/RS</p>
+<p style="margin-top:30px;color:#888;font-size:0.8rem">ABERTO ATÉ ÀS 00:30 NOS FINAIS DE SEMANA</p>
+</div>
+<iframe class="mf" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110532.89531853683!2d-51.24285863266938!3d-30.033056157813872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977fd4d5f470d%3A0x633604f7c10d7a03!2sPorto%20Alegre%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" loading="lazy"></iframe>
+</div>
+</div>
+<footer>
+<p>© 2026 BURGER MASTER ARTESANAL — RESPEITE O BLEND</p>
+<p style="margin-top:15px;font-size:0.7rem;letter-spacing:4px">CODED BY <a href="https://jmswebsolutions.github.io/" target="_blank">JMS WEB SOLUTIONS</a></p>
+</footer>
+<a href="https://wa.me/5551991345607" class="wa" target="_blank"><i class="fas fa-hamburger"></i></a>
+`;
+window.tk=function(){document.getElementById('nv').classList.toggle('act')};
+window.onload=()=>{
+const a=document.getElementById('jms-app-core');
+const l=document.getElementById('burger-loader');
+setTimeout(()=>{
+a.innerHTML=_0xBURGER;
+l.style.display='none';
+a.style.opacity='1';
+document.body.style.overflowY='auto';
+},1200);
+};
+document.onkeydown=function(e){if(e.keyCode==123||(e.ctrlKey&&(e.keyCode==85||e.keyCode==83||e.keyCode==67)))return false};
+</script>
+</body>
+</html>

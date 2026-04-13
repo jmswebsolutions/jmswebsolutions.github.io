@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<title>Justitia Advocacia | Excelência Jurídica</title>
+<link rel="icon" type="image/png" href="https://jmswebsolutions.github.io/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--p:#0a1e36;--a:#b89a67;--b:#f4f4f2;--w:#ffffff}
+*{margin:0;padding:0;box-sizing:border-box}
+body,html{background:var(--p);width:100%;overflow-x:hidden;user-select:none;-webkit-user-select:none;font-family:'Montserrat',sans-serif}
+#_jms_loader{position:fixed;inset:0;background:var(--p);display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:9999;color:var(--a);font-family:'Cinzel'}
+.loader-bar{width:120px;height:2px;background:rgba(184,154,103,0.2);margin-top:20px;position:relative;overflow:hidden}
+.loader-bar::after{content:'';position:absolute;width:100%;height:100%;background:var(--a);left:-100%;animation:L 1.2s infinite}
+@keyframes L{to{left:100%}}
+#_jms_root{display:none;opacity:0;transition:opacity 0.6s ease;width:100%;overflow-x:hidden}
+</style>
+</head>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+<div id="_jms_loader">
+    <div style="letter-spacing:5px;font-weight:900">JUSTITIA</div>
+    <div class="loader-bar"></div>
+</div>
+
+<div id="_jms_root"></div>
+
+<script>
+(function(){
+    const _data = [
+        '<style>',
+        'header{padding:0 7%;height:85px;background:var(--w);position:fixed;top:0;width:100%;z-index:995;display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid var(--a);box-shadow:0 2px 15px rgba(0,0,0,0.1)}',
+        '.logo{font-family:"Cinzel";color:var(--p);font-weight:900;font-size:1.4rem}.logo span{color:var(--a)}',
+        '.nav{display:flex;gap:30px}.nav a{color:var(--p);text-decoration:none!important;font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;transition:0.3s}',
+        '.hero{height:90vh;background:linear-gradient(rgba(10,30,54,0.85),rgba(10,30,54,0.85)),url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80");background-size:cover;background-position:center;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--w);padding:0 7%;width:100%}',
+        '.hero h1{font-family:"Cinzel";font-size:clamp(1.8rem,5vw,3.2rem);margin-bottom:25px;border-bottom:2px solid var(--a);padding-bottom:15px;color:var(--w)!important}',
+        '.btn-jms{background:var(--a);color:var(--w)!important;padding:18px 45px;font-weight:700;text-transform:uppercase;letter-spacing:2px;border:1px solid var(--a);transition:0.4s;cursor:pointer;text-decoration:none!important;display:inline-block}',
+        '.btn-jms:hover{background:transparent;color:var(--w)!important;border-color:var(--w)}',
+        '.sec{padding:100px 7%;background:var(--b);width:100%}.sec-t{text-align:center;margin-bottom:60px}.sec-t h2{font-family:"Cinzel";color:var(--p);font-size:2.2rem}',
+        '.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}',
+        '.card-j{background:var(--w);padding:50px;text-align:center;border:1px solid #eee;transition:0.4s}.card-j i{font-size:2.5rem;color:var(--a);margin-bottom:20px;display:block}',
+        '.f-area{background:var(--p);padding:50px;color:var(--w)}.f-area input, .f-area select, .f-area textarea{width:100%;padding:15px;margin-bottom:20px;background:rgba(255,255,255,0.05);border:none;border-bottom:1px solid var(--a);color:var(--w);outline:none}',
+        '.map-j{height:400px;filter:grayscale(1) contrast(1.1);border:1px solid #ddd;width:100%}',
+        '.addr-j{background:var(--w);padding:35px;margin-top:20px;border-left:5px solid var(--a);color:var(--p);box-shadow:0 5px 15px rgba(0,0,0,0.05)}',
+        '.wa-p{position:fixed;bottom:30px;right:30px;background:#25d366;width:65px;height:65px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--w)!important;font-size:35px;text-decoration:none!important;z-index:1000;animation:pulseW 2s infinite}',
+        '@keyframes pulseW{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}',
+        'footer{background:var(--w);padding:60px 7%;text-align:center;border-top:1px solid #eee;color:#777;font-size:0.85rem} footer a{color:var(--a)!important;font-weight:800;text-decoration:none!important}',
+        '.m-btn{display:none;font-size:1.6rem;color:var(--p);cursor:pointer}',
+        '@media(max-width:992px){.m-btn{display:block}.nav{position:fixed;top:85px;right:-100%;width:80%;height:100vh;background:var(--w);flex-direction:column;padding:60px 40px;transition:0.5s;box-shadow:-5px 0 15px rgba(0,0,0,0.1)}.nav.active{right:0}.nav a{font-size:1.1rem}}',
+        '</style>',
+        '<header><div class="logo">JUSTITIA<span>ADVOCACIA</span></div><div class="m-btn" id="_mB"><i class="fas fa-bars"></i></div><nav class="nav" id="_mN"><a href="#h">Início</a><a href="#s">Atuação</a><a href="#c">Contato</a></nav></header>',
+        '<section class="hero" id="h"><h1>EXCELÊNCIA JURÍDICA NA<br><span>DEFESA DOS SEUS DIREITOS</span></h1><a href="#c" class="btn-jms">Solicitar Análise</a></section>',
+        '<section class="sec" id="s"><div class="sec-t"><h2>ESPECIALIDADES</h2><div style="width:50px;height:2px;background:var(--a);margin:15px auto"></div></div><div class="grid"><div class="card-j"><i class="fas fa-gavel"></i><h3>CIVIL</h3><p>Consultoria e contencioso estratégico.</p></div><div class="card-j"><i class="fas fa-users"></i><h3>FAMÍLIA</h3><p>Divórcios e causas sucessórias.</p></div><div class="card-j"><i class="fas fa-briefcase"></i><h3>TRABALHISTA</h3><p>Assessoria jurídica especializada.</p></div></div></section>',
+        '<section class="sec" id="c" style="background:#fff"><div class="grid"><div class="f-area"><h3 style="font-family:Cinzel;color:var(--a);margin-bottom:25px">AGENDAR CONSULTA</h3><input placeholder="Nome completo"><input placeholder="WhatsApp"><select><option>Área de Interesse</option></select><textarea placeholder="Breve resumo" rows="3"></textarea><button class="btn-jms" style="width:100%">Enviar agora</button></div><div><iframe class="map-j" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.21855663673!2d-51.230000000000004!3d-30.030000000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519790600000000%3A0x0!2zMzDCsDAxJzQ4LjAiUyA1McKwMTMnNDguMCJX!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"></iframe><div class="addr-j"><strong>UNIDADE PORTO ALEGRE</strong><p>Av. Carlos Gomes, 1500 - Corporate Tower</p><p>CEP: 90480-003 - Rio Grande do Sul</p></div></div></div></section>',
+        '<footer><div class="logo">JUSTITIA<span>ADVOCACIA</span></div><p style="margin-top:15px">© 2026 Desenvolvido por <a href="https://jmswebsolutions.github.io/" target="_blank">JMS WEB SOLUTIONS</a></p></footer>',
+        '<a href="https://wa.me/5551991345607" class="wa-p" target="_blank"><i class="fab fa-whatsapp"></i></a>'
+    ];
+
+    const app = document.getElementById('_jms_root');
+    const load = document.getElementById('_jms_loader');
+
+    window.onload = () => {
+        setTimeout(() => {
+            app.innerHTML = _data.join('');
+            load.style.display = 'none';
+            app.style.display = 'block';
+            setTimeout(() => { app.style.opacity = '1'; document.body.style.background = 'var(--b)'; }, 100);
+            
+            const btn = document.getElementById('_mB');
+            const nav = document.getElementById('_mN');
+            btn.onclick = () => nav.classList.toggle('active');
+            nav.querySelectorAll('a').forEach(l => l.onclick = () => nav.classList.remove('active'));
+        }, 1200);
+    };
+
+    document.onkeydown = (e) => {
+        if (e.keyCode == 123 || (e.ctrlKey && (e.keyCode == 85 || e.keyCode == 83 || e.keyCode == 67 || e.keyCode == 73))) return false;
+    };
+})();
+</script>
+</body>
+</html>

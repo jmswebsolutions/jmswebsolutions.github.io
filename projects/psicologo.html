@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psicologia Clínica | Equilíbrio e Bem-Estar</title>
+<link rel="icon" type="image/png" href="https://jmswebsolutions.github.io/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--p:#588157;--s:#344e41;--a:#a3b18a;--bg:#fdfdfd;--t:#333d29;--m:#6a7c6a}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif;scroll-behavior:smooth}
+body{background-color:var(--bg);color:var(--t);line-height:1.8;overflow-x:hidden;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+header{padding:0 7%;height:90px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.98);position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.03);backdrop-filter:blur(10px)}
+.logo{font-family:'Libre Baskerville',serif;font-size:1.5rem;color:var(--s);font-weight:700}.logo span{color:var(--p)}
+.nav-links{display:flex;align-items:center}.nav-links a{color:var(--s);text-decoration:none!important;margin-left:30px;font-weight:600;font-size:0.9rem;transition:0.3s}.nav-links a:hover{color:var(--p)}
+.m-b{display:none;color:var(--s);font-size:1.6rem;cursor:pointer}
+.hero{height:85vh;background:linear-gradient(135deg,rgba(255,255,255,0.92),rgba(255,255,255,0.6)),url('https://images.unsplash.com/photo-1527137342181-19aab11a8ee1?q=80&w=1470&auto=format&fit=crop');background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 7%;margin-top:90px}
+.hero h1{font-family:'Libre Baskerville',serif;font-size:clamp(2.5rem,6vw,3.8rem);color:var(--s);line-height:1.2;margin-bottom:20px}.hero h1 span{color:var(--p);display:block}
+.btn{background:var(--p);color:#fff!important;padding:18px 45px;text-decoration:none!important;font-weight:600;border-radius:50px;display:inline-block;transition:0.4s;border:none;cursor:pointer;letter-spacing:0.5px}
+.btn:hover{background:var(--s);transform:translateY(-3px);box-shadow:0 10px 25px rgba(52,78,65,0.2)}
+section{padding:120px 7%}.s-t{text-align:center;margin-bottom:80px}.s-t h2{font-family:'Libre Baskerville',serif;font-size:2.8rem;color:var(--s)}
+.s-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:35px}
+.card{background:#fff;padding:50px 40px;border-radius:30px;text-align:center;border:1px solid #f0f2f0;transition:0.4s}.card:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(0,0,0,0.04)}
+.card i{font-size:2.8rem;color:var(--p);margin-bottom:25px}
+.c-a{display:grid;grid-template-columns:1.2fr 0.8fr;gap:60px;align-items:start}
+.f-c{background:#fff;padding:55px;border-radius:30px;box-shadow:0 15px 50px rgba(0,0,0,0.02)}
+.f-c input,.f-c select,.f-c textarea{width:100%;padding:18px;margin-bottom:20px;border:1px solid #e1e5e1;background:#fcfdfc;border-radius:12px;outline:none;font-size:1rem}
+.m-w{border-radius:30px;overflow:hidden;border:1px solid #e1e5e1;height:400px}
+.addr-b{margin-top:25px;padding:30px;background:#f8f9f8;border-radius:20px;border-left:5px solid var(--p)}
+.addr-b p{font-size:0.95rem;color:var(--m);margin-bottom:12px;display:flex;align-items:center}.addr-b i{color:var(--p);margin-right:15px;width:20px}
+.w-f{position:fixed;bottom:35px;right:35px;background:#25d366;width:65px;height:65px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:35px;color:#fff!important;z-index:2000;text-decoration:none!important;animation:pulse-wpp 2s infinite;box-shadow:0 10px 20px rgba(37,211,102,0.3)}
+@keyframes pulse-wpp{0%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(37,211,102,0.7)}70%{transform:scale(1);box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{transform:scale(0.95)}}
+footer{padding:80px 7% 40px;background:#fff;text-align:center;border-top:1px solid #f0f2f0}
+.f-i{margin-top:25px;font-size:0.85rem;color:#99a;letter-spacing:0.5px}
+.f-i a{color:var(--p);text-decoration:none!important;font-weight:700}
+@media (max-width:992px){.m-b{display:block}.nav-links{position:fixed;top:90px;left:-100%;width:100%;height:100vh;background:#fff;flex-direction:column;padding-top:60px;transition:0.5s}.nav-links.active{left:0}.nav-links a{margin:25px 0;font-size:1.3rem}.c-a{grid-template-columns:1fr}}
+</style>
+</head>
+<body oncontextmenu="return false" onkeydown="return false">
+
+<header>
+<div class="logo">PSICO<span>CLÍNICA</span></div>
+<div class="m-b" id="toggleMenu"><i class="fas fa-bars"></i></div>
+<nav class="nav-links" id="menuNav">
+<a href="#inicio">Início</a>
+<a href="#especialidades">Especialidades</a>
+<a href="#agendamento">Agendamento</a>
+</nav>
+</header>
+
+<section class="hero" id="inicio">
+<h1>Ouvir você é o primeiro passo para <span>o seu bem-estar.</span></h1>
+<p>Apoio psicológico ético e especializado para ajudar você a ressignificar traumas e fortalecer sua saúde mental.</p>
+<a href="#agendamento" class="btn">Solicitar Agendamento</a>
+</section>
+
+<section id="especialidades">
+<div class="s-t"><h2>Áreas de Atuação</h2></div>
+<div class="s-g">
+<div class="card">
+<i class="fas fa-leaf"></i>
+<h3>Individual</h3>
+<p>Foco no autoconhecimento e tratamento de transtornos de humor em ambiente acolhedor.</p>
+</div>
+<div class="card">
+<i class="fas fa-heart"></i>
+<h3>Casais</h3>
+<p>Suporte na mediação de conflitos e reconstrução da conexão afetiva entre parceiros.</p>
+</div>
+<div class="card">
+<i class="fas fa-seedling"></i>
+<h3>TCC</h3>
+<p>Terapia focada na mudança de padrões de pensamento para resultados práticos e duradouros.</p>
+</div>
+</div>
+</section>
+
+<section id="agendamento" style="background:#f9faf9">
+<div class="c-a">
+<div class="f-c">
+<h3 style="font-family:'Libre Baskerville';margin-bottom:30px;color:var(--s);font-size:1.8rem">Sua primeira sessão</h3>
+<form onsubmit="return false">
+<input type="text" placeholder="Nome Completo">
+<input type="tel" placeholder="WhatsApp para contato">
+<select>
+<option value="" disabled selected>Modalidade Preferida</option>
+<option>Presencial em Porto Alegre</option>
+<option>Atendimento Online (Vídeo)</option>
+</select>
+<textarea placeholder="Pode nos contar brevemente o motivo do contato?" rows="4"></textarea>
+<button class="btn" style="width:100%">Enviar Mensagem</button>
+</form>
+</div>
+<div>
+<div class="m-w">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110532.74411132644!2d-51.24641957255861!3d-30.033056199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951979ad2291244f%3A0xf67308731f822971!2sPorto%20Alegre%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr5" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+<div class="addr-b">
+<p><i class="fas fa-map-marker-alt"></i> Rua dos Pinheiros, 1200 - Moinhos de Vento, Porto Alegre/RS</p>
+<p><i class="fas fa-envelope"></i> contato@psicoclinica.com.br</p>
+<p><i class="fas fa-phone-alt"></i> (51) 99134-5607</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="logo">PSICO<span>CLÍNICA</span></div>
+<div class="f-i">
+© 2026 Porto Alegre/RS. <br>
+PROJETADO POR <a href="https://jmswebsolutions.github.io/" target="_blank">JMS WEB SOLUTIONS</a>
+</div>
+</footer>
+
+<a href="https://wa.me/5551991345607" class="w-f" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+(function(){const b=document.getElementById('toggleMenu'),m=document.getElementById('menuNav'),i=document.querySelectorAll('.nav-links a');b.addEventListener('click',()=>{m.classList.toggle('active');b.querySelector('i').classList.toggle('fa-bars');b.querySelector('i').classList.toggle('fa-times')});i.forEach(e=>{e.addEventListener('click',()=>{m.classList.remove('active');b.querySelector('i').classList.add('fa-bars');b.querySelector('i').classList.remove('fa-times')})});document.addEventListener('keydown',function(e){if(e.ctrlKey&&(e.key==='u'||e.key==='s'||e.key==='c'||e.key==='i')||e.keyCode===123){e.preventDefault();return false}});document.addEventListener('mousedown',function(e){if(e.button===2){return false}})})()
+</script>
+</body>
+</html>

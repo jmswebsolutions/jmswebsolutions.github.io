@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dental Prime | Odontologia Especializada</title>
+<link rel="icon" type="image/png" href="https://jmswebsolutions.github.io/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lora:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--p:#0077b6;--s:#00b4d8;--d:#023e8a;--l:#f8f9fa;--t:#222;--m:#555}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+body{background-color:#fff;color:var(--t);line-height:1.6;overflow-x:hidden;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+header{padding:0 7%;height:80px;display:flex;justify-content:space-between;align-items:center;background:#fff;position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 2px 15px rgba(0,0,0,0.05)}
+.logo{font-family:'Lora',serif;font-size:1.6rem;color:var(--d);font-weight:700}.logo span{color:var(--s)}
+.nav-links{display:flex;align-items:center}.nav-links a{color:var(--t);text-decoration:none!important;margin-left:25px;font-weight:600;font-size:0.85rem;text-transform:uppercase;transition:0.3s}.nav-links a:hover{color:var(--p)}
+.m-h{display:none;color:var(--p);font-size:1.6rem;cursor:pointer}
+.hero{height:85vh;background:linear-gradient(to right,rgba(255,255,255,0.95),rgba(255,255,255,0.3)),url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1470&auto=format&fit=crop');background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:center;padding:0 7%;margin-top:80px}
+.hero h1{font-family:'Lora',serif;font-size:clamp(2rem,6vw,3.8rem);color:var(--d);max-width:700px;margin-bottom:20px;line-height:1.1}.hero h1 span{color:var(--p)}
+.btn{background:var(--p);color:#fff!important;padding:16px 40px;text-decoration:none!important;font-weight:600;border-radius:6px;display:inline-block;transition:0.4s;border:none;cursor:pointer;text-transform:uppercase;letter-spacing:1px}
+.btn:hover{background:var(--d);transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,119,182,0.2)}
+section{padding:100px 7%}.s-t{text-align:center;margin-bottom:60px}.s-t h2{font-family:'Lora',serif;font-size:2.8rem;color:var(--d)}
+.s-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px}
+.s-c{padding:45px;border-radius:15px;background:var(--l);border:1px solid #eee;text-align:center;transition:0.4s}.s-c:hover{border-color:var(--s);background:#fff;transform:translateY(-8px);box-shadow:0 15px 35px rgba(0,0,0,0.05)}
+.s-c i{font-size:3rem;color:var(--s);margin-bottom:25px}
+.c-a{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.f-c{background:#fff;padding:50px;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.04);border-left:5px solid var(--p)}
+input,select{width:100%;padding:15px;margin-bottom:15px;border:1px solid #ddd;border-radius:8px;outline:none;background:#fcfcfc}
+.m-w{border-radius:20px;overflow:hidden;height:400px;border:1px solid #eee}
+.loc-inf{margin-top:25px;padding:30px;background:var(--l);border-radius:15px;border-bottom:3px solid var(--s)}
+.loc-inf p{display:flex;align-items:center;gap:15px;color:var(--m);margin-bottom:12px;font-size:0.95rem}.loc-inf i{color:var(--p)}
+footer{padding:80px 7% 40px;background:#fff;text-align:center;border-top:1px solid #f0f0f0}
+.f-l a{color:var(--p);text-decoration:none!important;font-weight:800}
+.w-f{position:fixed;bottom:35px;right:35px;background:#25d366;width:65px;height:65px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:35px;color:#fff!important;z-index:2000;text-decoration:none!important;animation:pulse-dental 2s infinite}
+@keyframes pulse-dental{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7)}70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+@media (max-width:992px){.m-h{display:block}.nav-links{position:fixed;top:80px;left:-100%;width:100%;height:100vh;background:#fff;flex-direction:column;padding-top:50px;transition:0.5s}.nav-links.active{left:0}.nav-links a{margin:20px 0;font-size:1.2rem}.c-a{grid-template-columns:1fr}}
+</style>
+</head>
+<body oncontextmenu="return false">
+<header>
+<div class="logo">DENTAL<span>PRIME</span></div>
+<div class="m-h" id="mB"><i class="fas fa-bars"></i></div>
+<nav class="nav-links" id="nL">
+<a href="#inicio">Início</a>
+<a href="#servicos">Tratamentos</a>
+<a href="#contato">Agendamento</a>
+</nav>
+</header>
+<section class="hero" id="inicio">
+<h1>Sorrisos saudáveis com <span>tecnologia de ponta.</span></h1>
+<p style="color:var(--m);font-size:1.1rem;margin-bottom:35px;max-width:600px">Especialistas em implantes, ortodontia e estética dental em um ambiente acolhedor no coração de Porto Alegre.</p>
+<a href="#contato" class="btn">Agendar Avaliação</a>
+</section>
+<section id="servicos">
+<div class="s-t"><h2>Nossas Especialidades</h2></div>
+<div class="s-g">
+<div class="s-c"><i class="fas fa-tooth"></i><h3>Implantes</h3><p>Reabilitação oral completa com tecnologia guiada por computador.</p></div>
+<div class="s-c"><i class="fas fa-align-center"></i><h3>Ortodontia</h3><p>Alinhadores invisíveis e aparelhos modernos para todas as idades.</p></div>
+<div class="s-c"><i class="fas fa-smile-beam"></i><h3>Estética</h3><p>Lentes de contato cerâmicas e clareamento a laser de alta potência.</p></div>
+</div>
+</section>
+<section id="contato" style="background:#f4f9ff">
+<div class="c-a">
+<div class="f-c">
+<h3 style="margin-bottom:25px;color:var(--d);font-size:1.8rem">Solicite um Contato</h3>
+<form onsubmit="return false">
+<input type="text" placeholder="Nome Completo">
+<input type="tel" placeholder="Seu WhatsApp">
+<select><option>Avaliação Geral</option><option>Estética Dental</option><option>Implantes</option></select>
+<button class="btn" style="width:100%">Enviar Solicitação</button>
+</form>
+</div>
+<div>
+<div class="m-w">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110595.03158434725!2d-51.2176985!3d-30.0330562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95199cd2d28650af%3A0x1a365a3880c30f40!2sPorto%20Alegre%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" loading="lazy"></iframe>
+</div>
+<div class="loc-inf">
+<p><i class="fas fa-map-marker-alt"></i> Av. Nilo Peçanha, 2500 - Três Figueiras, Porto Alegre/RS</p>
+<p><i class="fas fa-phone"></i> (51) 99134-5607</p>
+<p><i class="fas fa-clock"></i> Seg a Sex: 08:30 - 19:00</p>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class="logo">DENTAL<span>PRIME</span></div>
+<p style="color:var(--m);font-size:0.9rem;margin-top:20px">
+© 2026 Porto Alegre/RS. <br>
+DESIGNED BY <span class="f-l"><a href="https://jmswebsolutions.github.io/" target="_blank">JMS WEB SOLUTIONS</a></span>
+</p>
+</footer>
+<a href="https://wa.me/5551991345607" class="w-f" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<script>
+(function(){
+const b=document.getElementById('mB'),n=document.getElementById('nL'),a=document.querySelectorAll('.nav-links a');
+b.onclick=()=>{n.classList.toggle('active');b.querySelector('i').classList.toggle('fa-bars');b.querySelector('i').classList.toggle('fa-times')};
+a.forEach(l=>{l.onclick=()=>{n.classList.remove('active');b.querySelector('i').classList.add('fa-bars');b.querySelector('i').classList.remove('fa-times')}});
+document.onkeydown=e=>{if(e.ctrlKey&&(e.key==='u'||e.key==='s'||e.key==='c')||e.keyCode===123)return false};
+})();
+</script>
+</body>
+</html>

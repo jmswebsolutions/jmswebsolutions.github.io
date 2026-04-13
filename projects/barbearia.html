@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage Barber | Estilo e Tradição em Porto Alegre</title>
+    
+    <meta name="description" content="Barbearia Heritage em Porto Alegre. Corte de cabelo, barba e experiência clássica premium.">
+    <link rel="icon" type="image/png" href="https://jmswebsolutions.github.io/logo.png">
+    <meta name="author" content="JMS Web Solutions">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        
+        body, html { background: #070707; margin: 0; height: 100vh; overflow: hidden; }
+        #app { opacity: 0; transition: opacity 0.8s ease-in; }
+        #loader { 
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; 
+            align-items: center; color: #C5A059; font-family: 'Cinzel', serif; 
+        }
+        .spinner { 
+            width: 40px; height: 40px; border: 3px solid rgba(197, 160, 89, 0.2); 
+            border-top-color: #C5A059; border-radius: 50%; animation: spin 1s linear infinite; 
+            margin-bottom: 20px; 
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        * { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+    </style>
+</head>
+<body oncontextmenu="return false" onselectstart="return false" onkeydown="return false">
+
+    <div id="loader">
+        <div class="spinner"></div>
+        <p style="letter-spacing: 3px;">INICIANDO EXPERIÊNCIA...</p>
+    </div>
+
+    <div id="app"></div>
+
+    <script>
+        
+        const _0xLAYOUT = `
+            <style>
+                :root { --gold: #C5A059; --dark: #070707; --surface: #121212; --text: #FFFFFF; }
+                * { margin:0; padding:0; box-sizing:border-box; font-family:'Plus Jakarta Sans', sans-serif; }
+                
+                header { 
+                    padding: 0 7%; height: 85px; background: rgba(7, 7, 7, 0.98); 
+                    position: fixed; top: 0; left: 0; width: 100%; 
+                    z-index: 9999; display: flex; justify-content: space-between; 
+                    align-items: center; border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+                    backdrop-filter: blur(15px);
+                }
+                .logo { font-family:'Cinzel'; color:var(--gold); font-weight:900; font-size:1.5rem; letter-spacing:2px; }
+
+                /* Nav & Mobile Menu */
+                .nav-menu { display: flex; gap: 30px; }
+                .nav-menu a { color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; }
+                .nav-menu a:hover { color: var(--gold); }
+                .menu-toggle { display: none; color: var(--gold); font-size: 1.6rem; cursor: pointer; }
+
+                /* Hero */
+                .hero { 
+                    height:100vh; background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
+                    url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80'); 
+                    background-size:cover; background-position:center; display:flex; 
+                    flex-direction:column; align-items:center; justify-content:center; 
+                    text-align:center; padding:0 7%; 
+                }
+                .hero h1 { font-family:'Cinzel'; font-size:clamp(2.5rem, 8vw, 5rem); color:var(--gold); margin-bottom:20px; text-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+                .hero p { color:var(--text); max-width:750px; margin-bottom:40px; font-size:1.1rem; line-height: 1.8; opacity: 0.9; }
+                
+                .btn-cta { 
+                    background:var(--gold); color:#000; padding:20px 50px; 
+                    text-decoration:none; font-weight:900; letter-spacing:2px; 
+                    text-transform:uppercase; transition: 0.4s; border: 1px solid var(--gold);
+                }
+                .btn-cta:hover { background: transparent; color: var(--gold); transform: translateY(-5px); }
+
+                /* Services */
+                .section { padding: 100px 7%; background: var(--dark); }
+                .section-title { text-align: center; margin-bottom: 70px; }
+                .section-title h2 { font-family: 'Cinzel'; color: var(--gold); font-size: 2.8rem; margin-bottom: 15px; }
+                .section-title div { width: 60px; height: 3px; background: var(--gold); margin: 0 auto; }
+
+                .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px; }
+                .card { 
+                    background:var(--surface); padding:60px 40px; text-align:center; 
+                    border:1px solid rgba(197, 160, 89, 0.1); transition:0.4s; 
+                }
+                .card:hover { border-color:var(--gold); transform: translateY(-10px); background: #1a1a1a; }
+                .card i { font-size:3.5rem; color:var(--gold); margin-bottom:30px; display: block; }
+                .card h3 { color: var(--gold); font-family: 'Cinzel'; margin-bottom: 15px; font-size: 1.6rem; }
+                .card p { color: var(--text); font-size: 1.4rem; font-weight: 800; letter-spacing: 1px; }
+
+                /* Map & Address (CORRIGIDO) */
+                .map-section { background: var(--dark); }
+                .map-wrapper { height: 450px; width: 100%; border: 1px solid var(--gold); filter: grayscale(1) invert(0.92) contrast(1.2); }
+                .address-footer { 
+                    background: var(--surface); padding: 50px 7%; text-align: center; 
+                    border-bottom: 4px solid var(--gold); 
+                }
+                .address-footer h3 { font-family: 'Cinzel'; color: var(--gold); margin-bottom: 15px; }
+                .address-footer p { color: #FFF; font-size: 1.1rem; letter-spacing: 1px; }
+
+                /* WhatsApp Pulsante */
+                .wa-float { 
+                    position:fixed; bottom:30px; right:30px; background:#25d366; 
+                    width:70px; height:70px; border-radius:50%; display:flex; 
+                    align-items:center; justify-content:center; color:#FFF !important; 
+                    font-size:35px; animation: pulse 2s infinite; z-index:9999; 
+                    text-decoration:none !important; box-shadow: 0 10px 25px rgba(0,0,0,0.5); 
+                }
+                @keyframes pulse { 0% { box-shadow:0 0 0 0 rgba(37,211,102,0.7); } 70% { box-shadow:0 0 0 25px rgba(37,211,102,0); } 100% { box-shadow:0 0 0 0 rgba(37,211,102,0); } }
+
+                footer { padding:60px; text-align:center; background:#050505; border-top:1px solid #111; color: #555; }
+                footer a { color:var(--gold) !important; text-decoration:none !important; font-weight:800; transition: 0.3s; }
+                footer a:hover { color: #FFF !important; }
+
+                @media (max-width: 992px) {
+                    .menu-toggle { display: block; }
+                    .nav-menu { 
+                        display: none; position: absolute; top: 85px; left: 0; width: 100%; 
+                        background: #0F0F0F; padding: 40px 0; flex-direction: column; 
+                        text-align: center; border-bottom: 2px solid var(--gold); gap: 25px;
+                    }
+                    .nav-menu.active { display: flex; }
+                }
+            </style>
+
+            <header>
+                <div class="logo">HERITAGE BARBER</div>
+                <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+                <nav class="nav-menu" id="nav-menu">
+                    <a href="#" onclick="toggleMenu()">Início</a>
+                    <a href="#servicos" onclick="toggleMenu()">Serviços</a>
+                    <a href="#local" onclick="toggleMenu()">Localização</a>
+                </nav>
+            </header>
+
+            <div class="hero">
+                <h1>MODERN TRADITION</h1>
+                <p>A excelência em barbearia clássica. Onde cada corte é um legado e cada detalhe é uma obra de arte.</p>
+                <a href="https://wa.me/5551991345607" class="btn-cta">Agendar Agora</a>
+            </div>
+
+            <section class="section" id="servicos">
+                <div class="section-title">
+                    <h2>NOSSOS SERVIÇOS</h2>
+                    <div></div>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <i class="fas fa-scissors"></i>
+                        <h3>CORTE MASTER</h3>
+                        <p>R$ 65,00</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-gem"></i>
+                        <h3>COMBO ELITE</h3>
+                        <p>R$ 110,00</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-soap"></i>
+                        <h3>BARBA ROYAL</h3>
+                        <p>R$ 50,00</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="local" class="map-section">
+                <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.5786058098!2d-51.1398!3d-29.9852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDU5JzA2LjciUyA1McKwMDgnMjMuMyJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="address-footer">
+                    <h3>VISITE NOSSA SEDE</h3>
+                    <p>AV. ASSIS BRASIL, 7500 — SARANDI, PORTO ALEGRE - RS</p>
+                    <p style="margin-top: 10px; color: var(--gold); font-weight: 700;">SEG A SÁB: 09H ÀS 20H</p>
+                </div>
+            </section>
+
+            <footer>
+                <p>© 2026 HERITAGE BARBER — TODOS OS DIREITOS RESERVADOS</p>
+                <p style="margin-top: 15px;">DESENVOLVIDO POR <a href="https://jmswebsolutions.github.io/" target="_blank">JMS WEB SOLUTIONS</a></p>
+            </footer>
+
+            <a href="https://wa.me/5551991345607" class="wa-float" target="_blank" title="Fale Conosco">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        `;
+        
+        window.toggleMenu = function() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        };
+
+        window.onload = () => {
+            const app = document.getElementById('app');
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                app.innerHTML = _0xLAYOUT;
+                loader.style.display = 'none';
+                app.style.opacity = '1';
+                document.body.style.overflowY = 'auto'; 
+            }, 1200);
+        };
+
+        
+        document.onkeydown = function(e) {
+            
+            if (e.keyCode == 123 || (e.ctrlKey && (e.keyCode == 85 || e.keyCode == 83 || e.keyCode == 67 || e.keyCode == 73 || e.keyCode == 74))) {
+                return false;
+            }
+        };
+    </script>
+</body>
+</html>

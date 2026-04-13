@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delivery Express | Sabores que chegam até você</title>
+<meta name="description" content="O melhor delivery da região com entrega rápida e pratos irresistíveis.">
+<link rel="icon" type="image/png" href="https://jmswebsolutions.github.io/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body,html{background:#ea1d2c;margin:0;height:100vh;overflow:hidden;-webkit-user-select:none;user-select:none}
+#view{opacity:0;transition:opacity .8s ease-in}
+#load{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;font-family:'Fredoka',sans-serif}
+.spin{width:50px;height:50px;border:5px solid rgba(255,255,255,.2);border-top:5px solid #ffc107;border-radius:50%;animation:s 1s linear infinite}
+@keyframes s{100%{transform:rotate(360deg)}}
+</style>
+</head>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+<div id="load">
+<div class="spin"></div>
+<p style="margin-top:20px;letter-spacing:3px;font-size:10px">SECURE DEPLOY BY JMS</p>
+</div>
+<div id="view"></div>
+<script>
+const _0x992x = `
+<style>
+:root{--p:#ea1d2c;--y:#ffc107;--d:#2d2d2d;--w:#fff;--g:#f7f7f7}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif}
+header{padding:0 7%;height:80px;background:var(--w);position:fixed;top:0;width:100%;z-index:999;display:flex;justify-content:space-between;align-items:center;box-shadow:0 4px 15px rgba(0,0,0,0.08)}
+.l{font-family:'Fredoka';font-size:1.8rem;color:var(--p);font-weight:600}.l span{color:var(--y)}
+.m a{color:var(--d);text-decoration:none;font-weight:700;margin-left:25px;font-size:14px;transition:.3s}
+.m a:hover{color:var(--p)}
+.h{height:85vh;background:linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1470&auto=format&fit=crop');background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 7%}
+.h h1{font-family:'Fredoka';font-size:clamp(2.5rem,8vw,4.5rem);color:var(--p);line-height:1}
+.h p{font-size:1.3rem;max-width:650px;margin:20px 0 35px;font-weight:600;color:var(--d)}
+.btn{background:var(--p);color:var(--w);padding:20px 45px;text-decoration:none;font-weight:700;border-radius:15px;transition:.3s;box-shadow:0 10px 20px rgba(234,29,44,0.3);display:inline-block}
+.btn:hover{transform:translateY(-5px);background:var(--d)}
+section{padding:100px 7%}
+.t{text-align:center;margin-bottom:60px;font-family:'Fredoka';font-size:2.5rem;color:var(--d)}
+.gr{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+.c{background:var(--w);border-radius:25px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.05);transition:.4s;padding-bottom:30px;text-align:center;border:1px solid #eee}
+.c:hover{transform:translateY(-10px);border-color:var(--p)}
+.c img{width:100%;height:220px;object-fit:cover}
+.c h3{font-family:'Fredoka';font-size:1.6rem;margin:20px 0 10px}
+.c .pr{color:var(--p);font-weight:700;font-size:1.4rem;display:block;margin-bottom:20px}
+.inf-sc{display:flex;flex-direction:column;gap:0}
+.map-f{height:450px;width:100%;border:0}
+.addr{background:var(--d);color:var(--w);padding:60px 7%;text-align:center}
+.addr h2{font-family:'Fredoka';color:var(--y);margin-bottom:15px}
+.wa{position:fixed;bottom:30px;right:30px;background:#25d366;width:65px;height:65px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;color:#fff!important;z-index:9999;animation:p 1.5s infinite;text-decoration:none!important}
+@keyframes p{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7),0 10px 20px rgba(0,0,0,0.1)}70%{box-shadow:0 0 0 20px rgba(37,211,102,0),0 10px 20px rgba(0,0,0,0.1)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0),0 10px 20px rgba(0,0,0,0.1)}}
+.tg{display:none;font-size:2rem;color:var(--p);cursor:pointer}
+footer{padding:50px;text-align:center;background:var(--w);border-top:1px solid #eee}
+footer a{color:var(--p)!important;text-decoration:none;font-weight:700}
+@media (max-width:992px){.tg{display:block}.m{display:none;position:absolute;top:80px;left:0;width:100%;background:var(--w);flex-direction:column;padding:30px;text-align:center;gap:20px;box-shadow:0 10px 10px rgba(0,0,0,0.05)}.m.act{display:flex}}
+</style>
+<header>
+<div class="l">DELIVERY<span>EXPRESS</span></div>
+<div class="tg" onclick="tk()"><i class="fas fa-bars"></i></div>
+<nav class="m" id="mn">
+<a href="#" onclick="tk()">Início</a>
+<a href="#menu" onclick="tk()">Cardápio</a>
+<a href="#onde" onclick="tk()">Localização</a>
+</nav>
+</header>
+<div class="h">
+<h1>FOME DE QUÊ <span>HOJE?</span></h1>
+<p>Os melhores sabores da cidade entregues com a rapidez que sua fome exige.</p>
+<a href="https://wa.me/5551991345607" class="btn"><i class="fas fa-motorcycle"></i> PEÇA AGORA</a>
+</div>
+<section id="menu">
+<h2 class="t">Os Favoritos</h2>
+<div class="gr">
+<div class="c">
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=500">
+<h3>Marmita Fit Premium</h3>
+<span class="pr">R$ 22,90</span>
+<a href="https://wa.me/5551991345607" class="btn" style="padding:12px 30px">Escolher</a>
+</div>
+<div class="c">
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=500">
+<h3>Pizza Artesanal</h3>
+<span class="pr">R$ 45,00</span>
+<a href="https://wa.me/5551991345607" class="btn" style="padding:12px 30px">Escolher</a>
+</div>
+<div class="c">
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=500">
+<h3>Prato do Chef</h3>
+<span class="pr">R$ 28,00</span>
+<a href="https://wa.me/5551991345607" class="btn" style="padding:12px 30px">Escolher</a>
+</div>
+</div>
+</section>
+<div id="onde" class="inf-sc">
+<iframe class="map-f" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110502.60389542127!2d-51.249101!3d-30.0116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978fd4ed24273%3A0xf598e9836553531!2sPorto%20Alegre%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" loading="lazy"></iframe>
+<div class="addr">
+<h2>ONDE ESTAMOS</h2>
+<p>RUA DOS SABORES, 450 — CENTRO HISTÓRICO</p>
+<p>PORTO ALEGRE / RS</p>
+<p style="margin-top:15px;font-size:0.8rem;opacity:0.6">ENTREGAS EM ATÉ 7KM DA NOSSA SEDE</p>
+</div>
+</div>
+<footer>
+<p>© 2026 DELIVERY EXPRESS — SABOR EM MOVIMENTO</p>
+<p style="margin-top:10px;font-size:0.7rem">BY <a href="https://jmswebsolutions.github.io/" target="_blank">JMS WEB SOLUTIONS</a></p>
+</footer>
+<a href="https://wa.me/5551991345607" class="wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+`;
+window.tk=function(){document.getElementById('mn').classList.toggle('act')};
+window.onload=()=>{
+const v=document.getElementById('view');
+const l=document.getElementById('load');
+setTimeout(()=>{
+v.innerHTML=_0x992x;
+l.style.display='none';
+v.style.opacity='1';
+document.body.style.overflowY='auto';
+},1200);
+};
+document.onkeydown=function(e){if(e.keyCode==123||(e.ctrlKey&&(e.keyCode==85||e.keyCode==83||e.keyCode==67||e.keyCode==73||e.keyCode==74)))return false};
+</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bistro Fusion | Alta Gastronomia</title>
+<link rel="icon" type="image/png" href="https://jmswebsolutions.github.io/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--p:#a2d24b;--bg:#0d0e11;--c:#16181d;--t:#ffffff;--m:#94a3b8;--f:'Playfair Display',serif}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background-color:var(--bg);color:var(--t);line-height:1.6;overflow-x:hidden;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+header{padding:0 7%;height:80px;display:flex;justify-content:space-between;align-items:center;background:rgba(13,14,17,0.98);position:fixed;width:100%;top:0;z-index:1000;border-bottom:1px solid #2d3139;backdrop-filter:blur(10px)}
+.logo{font-family:var(--f);font-size:1.8rem;color:var(--p)}
+.nav-links{display:flex;align-items:center}.nav-links a{color:var(--t);text-decoration:none!important;margin-left:25px;font-size:0.9rem;font-weight:600;transition:0.3s}.nav-links a:hover{color:var(--p)}
+.m-h{display:none;color:var(--p);font-size:1.6rem;cursor:pointer}
+.hero{height:100vh;background:linear-gradient(to right,rgba(0,0,0,0.85),rgba(0,0,0,0.3)),url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80');background-size:cover;background-position:center;display:flex;align-items:center;padding:0 7%}
+.hero-content{max-width:650px}.hero-content h1{font-family:var(--f);font-size:clamp(2.5rem,8vw,4.5rem);line-height:1.1;margin-bottom:20px}.hero-content span{color:var(--p)}
+.btn{background:var(--p);color:#000!important;padding:18px 40px;text-decoration:none!important;font-weight:800;border-radius:50px;display:inline-block;transition:0.4s;text-transform:uppercase;border:none;cursor:pointer}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(162,210,75,0.4)}
+.s{padding:100px 7%}.s-h{text-align:center;margin-bottom:60px}.s-h h2{font-family:var(--f);font-size:3rem;margin-bottom:10px}
+.g-m{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
+.m-i{background:var(--c);padding:25px;border-radius:20px;display:flex;align-items:center;gap:20px;border:1px solid #2d3139;transition:0.3s}.m-i:hover{border-color:var(--p);transform:translateY(-5px)}
+.m-i img{width:90px;height:90px;border-radius:50%;object-fit:cover;border:2px solid var(--p)}
+.price{color:var(--p);font-weight:800;font-size:1.3rem;display:block;margin-top:5px}
+.r-a{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.f-r{background:var(--c);padding:45px;border-radius:25px;border:1px solid #2d3139}
+input,select{width:100%;padding:15px;margin-bottom:15px;background:#0d0e11;border:1px solid #2d3139;color:#fff;border-radius:10px;outline:none}
+.map-w{border-radius:25px;overflow:hidden;border:1px solid #2d3139;height:380px}
+.addr-c{margin-top:25px;padding:30px;background:var(--c);border-radius:20px;border-bottom:4px solid var(--p)}
+.addr-c p{display:flex;align-items:center;gap:15px;color:var(--m);margin-bottom:10px}.addr-c i{color:var(--p)}
+footer{padding:80px 7% 40px;background:#050505;text-align:center;border-top:1px solid #1a1d23}
+.f-l a{color:var(--p);text-decoration:none!important;font-weight:800}
+.w-f{position:fixed;bottom:35px;right:35px;background:#25d366;width:65px;height:65px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:35px;color:#fff!important;z-index:2000;text-decoration:none!important;animation:p-w 2s infinite}
+@keyframes p-w{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7)}70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+@media (max-width:992px){.m-h{display:block}.nav-links{position:fixed;top:80px;left:-100%;width:100%;height:100vh;background:var(--bg);flex-direction:column;padding-top:50px;transition:0.5s}.nav-links.active{left:0}.nav-links a{margin:20px 0;font-size:1.2rem}.r-a{grid-template-columns:1fr}}
+</style>
+</head>
+<body oncontextmenu="return false">
+<header>
+<div class="logo">BISTRO FUSION</div>
+<div class="m-h" id="openM"><i class="fas fa-bars"></i></div>
+<nav class="nav-links" id="menuL">
+<a href="#inicio">Início</a>
+<a href="#menu">Cardápio</a>
+<a href="#reservas">Reservas</a>
+</nav>
+</header>
+<section class="hero" id="inicio">
+<div class="hero-content">
+<h1>Sabor que Desperta <span>Sentidos.</span></h1>
+<p style="color:var(--m);margin-bottom:35px;font-size:1.2rem">Experiência gastronômica assinada por chefs internacionais no coração de Porto Alegre.</p>
+<a href="#reservas" class="btn">Garantir minha Mesa</a>
+</div>
+</section>
+<section class="s" id="menu">
+<div class="s-h"><h2>Especialidades</h2></div>
+<div class="g-m">
+<div class="m-i">
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=150&q=80" alt="Prato">
+<div class="m-inf">
+<h3>Salmão Heritage</h3>
+<p style="color:var(--m);font-size:0.85rem">Risoto de limão siciliano e ervas finas.</p>
+<span class="price">R$ 78,00</span>
+</div>
+</div>
+<div class="m-i">
+<img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=150&q=80" alt="Prato">
+<div class="m-inf">
+<h3>Pizza Trufada</h3>
+<p style="color:var(--m);font-size:0.85rem">Mix de cogumelos e azeite de trufas brancas.</p>
+<span class="price">R$ 65,00</span>
+</div>
+</div>
+<div class="m-i">
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=150&q=80" alt="Prato">
+<div class="m-inf">
+<h3>Costela 12 Horas</h3>
+<p style="color:var(--m);font-size:0.85rem">Assada em fogo lento com molho artesanal.</p>
+<span class="price">R$ 89,00</span>
+</div>
+</div>
+</div>
+</section>
+<section class="s" id="reservas" style="background:#111317">
+<div class="r-a">
+<div class="f-r">
+<h2 style="font-family:var(--f);font-size:2.2rem;margin-bottom:25px;color:var(--p)">Reservar Mesa</h2>
+<form onsubmit="return false">
+<input type="text" placeholder="Seu Nome">
+<input type="email" placeholder="E-mail">
+<div style="display:flex;gap:10px"><input type="date"><select><option>19:00</option><option>20:30</option><option>22:00</option></select></div>
+<button class="btn" style="width:100%">Confirmar Solicitação</button>
+</form>
+</div>
+<div>
+<div class="map-w">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110502.6038504!2d-51.246452!3d-30.011802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977936a213e5d%3A0xc3124430e793910f!2sPorto%20Alegre%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+<div class="addr-c">
+<p><i class="fas fa-map-marker-alt"></i> Rua Padre Chagas, 450 - Moinhos de Vento, Porto Alegre/RS</p>
+<p><i class="fas fa-phone"></i> (51) 99134-5607</p>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class="logo">BISTRO FUSION</div>
+<p style="color:var(--m);font-size:0.9rem;margin-top:20px">
+© 2026 Porto Alegre/RS. <br>
+DESENVOLVIDO POR <span class="f-l"><a href="https://jmswebsolutions.github.io/" target="_blank">JMS WEB SOLUTIONS</a></span>
+</p>
+</footer>
+<a href="https://wa.me/5551991345607" class="w-f" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<script>
+(function(){
+const b=document.getElementById('openM'),m=document.getElementById('menuL'),a=document.querySelectorAll('.nav-links a');
+b.onclick=()=>{m.classList.toggle('active')};
+a.forEach(l=>{l.onclick=()=>{m.classList.remove('active')}});
+document.onkeydown=(e)=>{if(e.ctrlKey&&(e.key==='u'||e.key==='s'||e.key==='c')||e.keyCode===123)return false};
+})();
+</script>
+</body>
+</html>

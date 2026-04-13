@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio de Beleza | Transforme seu Visual</title>
+<link rel="icon" type="image/png" href="https://jmswebsolutions.github.io/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Prata&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--p:#c19a6b;--s:#1a1a1a;--bg:#ffffff;--t:#333;--m:#777}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;scroll-behavior:smooth}
+body{background-color:var(--bg);color:var(--t);line-height:1.6;overflow-x:hidden;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+header{padding:0 7%;height:90px;display:flex;justify-content:space-between;align-items:center;background:#fff;position:fixed;width:100%;top:0;z-index:1000;border-bottom:1px solid #f0f0f0}
+.logo{font-family:'Prata',serif;font-size:1.5rem;font-weight:700;color:var(--s);text-transform:uppercase}.logo span{color:var(--p)}
+.nav-links{display:flex;align-items:center}.nav-links a{color:var(--s);text-decoration:none!important;margin-left:25px;font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;transition:0.3s}.nav-links a:hover{color:var(--p)}
+.m-h{display:none;color:var(--s);font-size:1.6rem;cursor:pointer}
+.hero{height:85vh;background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),url('https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1374&auto=format&fit=crop');background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 7%;color:#fff;margin-top:90px}
+.hero h1{font-family:'Prata',serif;font-size:clamp(2.5rem,8vw,4.5rem);margin-bottom:20px;text-transform:uppercase;letter-spacing:2px}.hero h1 span{color:var(--p)}
+.btn{background:var(--p);color:#fff!important;padding:18px 45px;text-decoration:none!important;font-weight:600;border-radius:0;display:inline-block;text-transform:uppercase;transition:0.4s;border:none;cursor:pointer;letter-spacing:2px}
+.btn:hover{background:var(--s);transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,0.15)}
+section{padding:100px 7%}.s-t{text-align:center;margin-bottom:70px}.s-t h2{font-family:'Prata',serif;font-size:2.8rem;text-transform:uppercase;color:var(--s)}
+.s-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px}
+.s-i{text-align:center;padding:30px;background:#fff;border:1px solid #f9f9f9;transition:0.4s}.s-i:hover{box-shadow:0 15px 40px rgba(0,0,0,0.05);border-color:var(--p)}
+.s-i i{font-size:2.5rem;color:var(--p);margin-bottom:25px}
+.c-s{display:grid;grid-template-columns:1fr 1fr;gap:60px;background:#fafafa;align-items:start}
+.f-b{padding:50px;background:#fff;box-shadow:0 10px 40px rgba(0,0,0,0.03);border-top:4px solid var(--p)}
+input,select{width:100%;padding:15px;margin-bottom:20px;border:1px solid #eee;outline:none;background:#fcfcfc}
+.m-w{height:400px;border:1px solid #eee;overflow:hidden}
+.a-b{margin-top:25px;padding:30px;background:#fff;border:1px solid #eee}
+.a-b p{font-size:0.9rem;color:var(--m);margin-bottom:12px;display:flex;align-items:center}.a-b i{color:var(--p);margin-right:15px;width:20px}
+footer{padding:60px 7% 30px;background:#fff;text-align:center;border-top:1px solid #f0f0f0}
+.f-i{font-size:0.8rem;color:#aaa;margin-top:20px;letter-spacing:1px}.f-i a{color:var(--p);text-decoration:none!important;font-weight:800}
+.w-f{position:fixed;bottom:35px;right:35px;background:#25d366;width:65px;height:65px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:35px;color:#fff!important;z-index:2000;text-decoration:none!important;animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+@media (max-width:992px){.m-h{display:block}.nav-links{position:fixed;top:90px;left:-100%;width:100%;height:100vh;background:#fff;flex-direction:column;padding-top:60px;transition:0.5s}.nav-links.active{left:0}.nav-links a{margin:20px 0;font-size:1.2rem}.c-s{grid-template-columns:1fr}}
+</style>
+</head>
+<body oncontextmenu="return false">
+
+<header>
+<div class="logo">STUDIO<span>BELEZA</span></div>
+<div class="m-h" id="mB"><i class="fas fa-bars"></i></div>
+<nav class="nav-links" id="nL">
+<a href="#inicio">Início</a>
+<a href="#servicos">Serviços</a>
+<a href="#agendamento">Agendamento</a>
+</nav>
+</header>
+
+<section class="hero" id="inicio">
+<h1>Sua Beleza, <span>Nossa Arte.</span></h1>
+<p>Transformação e sofisticação em cada detalhe. O cuidado que o seu cabelo merece com especialistas em alta performance.</p>
+<a href="#agendamento" class="btn">Agendar Consultoria</a>
+</section>
+
+<section id="servicos">
+<div class="s-t"><h2>Nossas Especialidades</h2></div>
+<div class="s-g">
+<div class="s-i">
+<i class="fas fa-scissors"></i>
+<h3 style="font-family:'Prata';margin-bottom:15px">Corte Visagista</h3>
+<p>Alinhamento de traços e estilo para realçar sua melhor versão.</p>
+</div>
+<div class="s-i">
+<i class="fas fa-brush"></i>
+<h3 style="font-family:'Prata';margin-bottom:15px">Colorimetria</h3>
+<p>Mechas e colorações exclusivas com proteção total da fibra capilar.</p>
+</div>
+<div class="s-i">
+<i class="fas fa-spa"></i>
+<h3 style="font-family:'Prata';margin-bottom:15px">Terapia Capilar</h3>
+<p>Tratamentos profundos com tecnologia de ponta para saúde dos fios.</p>
+</div>
+</div>
+</section>
+
+<section id="agendamento" class="c-s">
+<div class="f-b">
+<h2 style="font-family:'Prata';margin-bottom:30px;color:var(--s)">Solicitar Horário</h2>
+<form onsubmit="return false">
+<input type="text" placeholder="Nome Completo">
+<input type="tel" placeholder="WhatsApp">
+<select>
+<option value="" disabled selected>Serviço Desejado</option>
+<option>Corte e Estilo</option>
+<option>Mechas e Cor</option>
+<option>Tratamento VIP</option>
+</select>
+<button class="btn" style="width:100%">Enviar Pedido</button>
+</form>
+</div>
+<div>
+<div class="m-w">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110565.48512595058!2d-51.25055819777174!3d-30.003222479577712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977fd4193da75%3A0x63311654817d9d0!2sPorto%20Alegre%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+<div class="a-b">
+<p><i class="fas fa-map-marker-alt"></i> Av. Carlos Gomes, 1100 - Petrópolis, Porto Alegre/RS</p>
+<p><i class="fas fa-phone-alt"></i> (51) 99134-5607</p>
+<p><i class="fas fa-clock"></i> Terça a Sábado: 09h - 19h</p>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="logo">STUDIO<span>BELEZA</span></div>
+<div class="f-i">
+© 2026 Porto Alegre/RS. <br>
+DESENVOLVIDO POR <a href="https://jmswebsolutions.github.io/" target="_blank">JMS WEB SOLUTIONS</a>
+</div>
+</footer>
+
+<a href="https://wa.me/5551991345607" class="w-f" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+(function(){
+const b=document.getElementById('mB'),n=document.getElementById('nL'),a=document.querySelectorAll('.nav-links a');
+b.onclick=()=>{n.classList.toggle('active');b.querySelector('i').classList.toggle('fa-bars');b.querySelector('i').classList.toggle('fa-times')};
+a.forEach(l=>{l.onclick=()=>{n.classList.remove('active')}});
+document.onkeydown=e=>{if(e.ctrlKey&&(e.key==='u'||e.key==='s'||e.key==='c')||e.keyCode===123)return false};
+})();
+</script>
+</body>
+</html>
