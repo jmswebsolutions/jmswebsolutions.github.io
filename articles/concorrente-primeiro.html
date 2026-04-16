@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O que acontece quando seu concorrente aparece primeiro | JMS Web Solutions</title>
+<link rel="icon" type="image/png" href="https://jmswebsolutions.github.io/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root { --bg: #0b0d11; --card: #161920; --primary: #ff5e14; --whatsapp: #25d366; --text: #f8fafc; --header-h: 80px; }
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; -webkit-user-select: none; user-select: none; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.8; overflow-x: hidden; }
+header { height: var(--header-h); padding: 0 7%; display: flex; justify-content: space-between; align-items: center; background: rgba(11, 13, 17, 0.98); backdrop-filter: blur(12px); position: fixed; top: 0; width: 100%; z-index: 2000; border-bottom: 1px solid #1e293b; }
+.logo { font-weight: 800; font-size: 1.2rem; color: var(--primary); letter-spacing: 1px; text-decoration: none; }
+.nav-menu { display: flex; align-items: center; }
+.nav-menu a { color: var(--text); text-decoration: none; margin-left: 25px; font-size: 0.85rem; font-weight: 600; transition: 0.3s; }
+.nav-menu a:hover { color: var(--primary); }
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 6px; background: none; border: none; z-index: 2100; }
+.hamburger span { width: 28px; height: 2px; background: var(--text); transition: 0.4s; }
+.article-hero { padding: calc(var(--header-h) + 80px) 7% 60px; text-align: center; background: radial-gradient(circle at top, #1e293b 0%, #0b0d11 100%); }
+.category-tag { color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem; margin-bottom: 25px; display: block; }
+.article-hero h1 { font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 800; line-height: 1.1; max-width: 1100px; margin: 0 auto; letter-spacing: -1px; }
+.content-wrapper { max-width: 900px; margin: 0 auto; padding: 0 7% 100px; }
+.featured-image { width: 100%; height: clamp(300px, 50vh, 500px); border-radius: 30px; background: url('https://images.pexels.com/photos/3182811/pexels-photo-3182811.jpeg?auto=compress&cs=tinysrgb&w=1260') center/cover; margin-bottom: 70px; border: 1px solid #334155; box-shadow: 0 30px 60px rgba(0,0,0,0.6); }
+.post-body { font-size: 1.15rem; color: #cbd5e1; pointer-events: none; }
+.post-body h2 { color: #fff; font-size: 2rem; margin: 50px 0 25px; font-weight: 700; border-left: 5px solid var(--primary); padding-left: 25px; }
+.info-card { background: var(--card); border: 1px solid #1e293b; padding: 40px; border-radius: 25px; margin: 50px 0; border-right: 4px solid var(--primary); }
+.info-card h4 { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; }
+.final-cta { background: linear-gradient(145deg, #161920 0%, #0b0d11 100%); border: 1px solid #334155; padding: 70px 40px; border-radius: 40px; text-align: center; margin-top: 100px; }
+.btn { background: var(--primary); color: white; padding: 20px 50px; border-radius: 15px; text-decoration: none; font-weight: 800; display: inline-block; transition: 0.4s; margin-top: 35px; text-transform: uppercase; letter-spacing: 1px; }
+.btn:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(255, 94, 20, 0.5); }
+.whatsapp-float { position: fixed; width: 65px; height: 65px; bottom: 40px; right: 40px; background-color: var(--whatsapp); color: #FFF; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 3000; text-decoration: none !important; animation: pulse-green 2s infinite; }
+@keyframes pulse-green { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+footer { padding: 80px 7% 40px; border-top: 1px solid #1e293b; text-align: center; background: #080a0d; }
+@media (max-width: 992px) {
+.hamburger { display: flex; }
+.nav-menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--bg); flex-direction: column; justify-content: center; transition: 0.5s; z-index: 2000; }
+.nav-menu.active { right: 0; }
+.nav-menu a { margin: 20px 0; font-size: 1.4rem; }
+}
+</style>
+</head>
+<body oncontextmenu="return false" onkeydown="return false" ondragstart="return false" onselectstart="return false">
+<header>
+<a href="https://jmswebsolutions.github.io/" class="logo">JMS WEB SOLUTIONS</a>
+<button class="hamburger" id="mobile-menu"><span></span><span></span><span></span></button>
+<nav class="nav-menu" id="nmn">
+<a href="https://jmswebsolutions.github.io/#portfolio">Trabalhos</a>
+<a href="https://jmswebsolutions.github.io/#segmentos">Soluções por Segmento</a>
+<a href="https://jmswebsolutions.github.io/#servicos">O que faço</a>
+<a href="https://jmswebsolutions.github.io/#blog">Blog</a>
+<a href="https://jmswebsolutions.github.io/#sobre">Sobre</a>
+<a href="https://wa.me/5551991345607" style="color:var(--primary);font-weight:bold">Falar no WhatsApp</a>
+</nav>
+</header>
+<a href="https://wa.me/5551991345607" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<section class="article-hero">
+<span class="category-tag">Análise de Mercado</span>
+<h1>O que acontece quando seu concorrente aparece primeiro e você não</h1>
+</section>
+<div class="content-wrapper">
+<div class="featured-image"></div>
+<article class="post-body">
+<p>No mercado digital de <strong>Porto Alegre</strong>, a visibilidade é o novo petróleo. Quando seu concorrente aparece primeiro, ele não está apenas ganhando um clique; ele está roubando a oportunidade de você mostrar o seu valor.</p>
+<h2>1. O Efeito Dominó da Perda</h2>
+<p>A cada busca onde você não está presente, sua marca enfraquece. O cliente médio associa o topo do Google à liderança. Se o vizinho está lá e você não, para o cérebro do consumidor, o vizinho é "maior".</p>
+<div class="info-card">
+<h4>Atenção</h4>
+<p>Mais de 90% dos usuários nunca chegam à segunda página. Se você não é visto, você não é lembrado.</p>
+</div>
+<h2>2. Retomando o Topo</h2>
+<p>A boa notícia é que com a <strong>JMS Web Solutions</strong>, você tem as ferramentas certas para ultrapassar. Sites rápidos, otimizados para SEO e focados em converter o visitante em uma mensagem no WhatsApp.</p>
+<div class="final-cta">
+<h3>Cansado de ser o segundo?</h3>
+<p>Sua empresa merece um site que realmente vence a concorrência.</p>
+<a href="https://wa.me/5551991345607" class="btn">Solicitar Orçamento Grátis</a>
+</div>
+</article>
+</div>
+<footer>
+<a href="https://jmswebsolutions.github.io/" class="logo">JMS WEB SOLUTIONS</a>
+<p style="color: #475569; font-size: 0.8rem; margin-top: 25px;">&copy; 2026 JMS Web Solutions. Todos os direitos reservados.</p>
+</footer>
+<script>
+const menuBtn = document.getElementById('mobile-menu');
+const nav = document.getElementById('nmn');
+menuBtn.addEventListener('click', () => {
+nav.classList.toggle('active');
+menuBtn.children[0].style.transform = nav.classList.contains('active') ? 'rotate(45deg) translate(5px, 6px)' : 'none';
+menuBtn.children[1].style.opacity = nav.classList.contains('active') ? '0' : '1';
+menuBtn.children[2].style.transform = nav.classList.contains('active') ? 'rotate(-45deg) translate(7px, -8px)' : 'none';
+});
+document.addEventListener('keydown', (e) => {
+if (e.ctrlKey && (e.key==='u' || e.key==='s' || e.key==='c' || e.key==='p' || e.key==='i') || e.keyCode === 123) {
+e.preventDefault();
+return false;
+}
+});
+</script>
+</body>
+</html>

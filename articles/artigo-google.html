@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Profissional | JMS Web Solutions</title>
+<link rel="icon" type="image/png" href="https://jmswebsolutions.github.io/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+--bg: #0b0d11;
+--card-bg: #161920;
+--primary: #ff5e14;
+--whatsapp: #25d366;
+--text: #f8fafc;
+--text-muted: #94a3b8;
+--header-h: 80px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.8; overflow-x: hidden; }
+header { height: var(--header-h); padding: 0 7%; display: flex; justify-content: space-between; align-items: center; background: rgba(11, 13, 17, 0.98); backdrop-filter: blur(12px); position: fixed; top: 0; width: 100%; z-index: 2000; border-bottom: 1px solid #1e293b; }
+.logo { font-weight: 800; font-size: 1.2rem; color: var(--primary); letter-spacing: 1px; text-decoration: none; }
+.nav-menu { display: flex; align-items: center; }
+.nav-menu a { color: var(--text); text-decoration: none; margin-left: 25px; font-size: 0.85rem; font-weight: 600; transition: 0.3s; }
+.nav-menu a:hover { color: var(--primary); }
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 6px; }
+.hamburger span { width: 28px; height: 2px; background: var(--text); transition: 0.4s; }
+.article-hero { padding: calc(var(--header-h) + 80px) 7% 60px; text-align: center; background: radial-gradient(circle at top, #1e293b 0%, #0b0d11 100%); }
+.category-tag { color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem; margin-bottom: 25px; display: block; }
+.article-hero h1 { font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 800; line-height: 1.1; max-width: 1100px; margin: 0 auto 30px; letter-spacing: -1px; }
+.content-wrapper { max-width: 900px; margin: 0 auto; padding: 0 7% 100px; }
+.featured-image { width: 100%; height: clamp(300px, 50vh, 500px); border-radius: 30px; background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80') center/cover; margin-bottom: 70px; border: 1px solid #334155; box-shadow: 0 30px 60px rgba(0,0,0,0.6); }
+#protected-content { font-size: 1.15rem; color: #cbd5e1; }
+#protected-content h2 { color: #fff; font-size: 2rem; margin: 50px 0 25px; font-weight: 700; border-left: 5px solid var(--primary); padding-left: 25px; }
+#protected-content p { margin-bottom: 30px; }
+#protected-content strong { color: #fff; font-weight: 800; }
+.info-card { background: var(--card-bg); border: 1px solid #1e293b; padding: 40px; border-radius: 25px; margin: 50px 0; border-right: 4px solid var(--primary); }
+.info-card h4 { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; }
+.final-cta { background: linear-gradient(145deg, #161920 0%, #0b0d11 100%); border: 1px solid #334155; padding: 70px 40px; border-radius: 40px; text-align: center; margin-top: 100px; position: relative; overflow: hidden; }
+.final-cta::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--primary); }
+.btn { background: var(--primary); color: white; padding: 20px 50px; border-radius: 15px; text-decoration: none; font-weight: 800; display: inline-block; transition: 0.4s; margin-top: 35px; text-transform: uppercase; letter-spacing: 1px; }
+.btn:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(255, 94, 20, 0.5); }
+.whatsapp-float { position: fixed; width: 65px; height: 65px; bottom: 40px; right: 40px; background-color: var(--whatsapp); color: #FFF; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); z-index: 3000; text-decoration: none !important; animation: pulse-green 2s infinite; }
+@keyframes pulse-green { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+footer { padding: 80px 7% 40px; border-top: 1px solid #1e293b; text-align: center; background: #080a0d; }
+@media (max-width: 992px) {
+.hamburger { display: flex; z-index: 2001; }
+.nav-menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--bg); flex-direction: column; justify-content: center; transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0); z-index: 2000; }
+.nav-menu.active { right: 0; }
+.nav-menu a { margin: 20px 0; font-size: 1.4rem; }
+header { padding: 0 5%; }
+}
+</style>
+</head>
+<body oncontextmenu="return false" onkeydown="return false" ondragstart="return false" onselectstart="return false">
+<header>
+<a href="https://jmswebsolutions.github.io/" class="logo">JMS WEB SOLUTIONS</a>
+<div class="hamburger" id="mobile-menu"><span></span><span></span><span></span></div>
+<nav class="nav-menu" id="nmn">
+<a href="https://jmswebsolutions.github.io/#portfolio">Trabalhos</a>
+<a href="https://jmswebsolutions.github.io/#segmentos">Soluções por Segmento</a>
+<a href="https://jmswebsolutions.github.io/#servicos">O que faço</a>
+<a href="https://jmswebsolutions.github.io/#blog">Blog</a>
+<a href="https://jmswebsolutions.github.io/#sobre">Sobre</a>
+<a href="https://wa.me/5551991345607" style="color:var(--primary);font-weight:bold">Falar no WhatsApp</a>
+</nav>
+</header>
+<a href="https://wa.me/5551991345607" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<section class="article-hero">
+<span class="category-tag">Presença Digital e Lucratividade</span>
+<h1>Por que negócios invisíveis no Google estão perdendo clientes todos os dias sem saber</h1>
+</section>
+<div class="content-wrapper">
+<div class="featured-image"></div>
+<article id="protected-content"></article>
+<div class="final-cta">
+<h3>Pare de dar vantagem para a sua concorrência.</h3>
+<p>O mercado digital não espera. Quem se posicionar primeiro agora dominará os próximos anos.</p>
+<a href="https://wa.me/5551991345607" class="btn">Solicitar Consultoria Gratuita</a>
+</div>
+</div>
+<footer>
+<a href="https://jmswebsolutions.github.io/" class="logo">JMS WEB SOLUTIONS</a>
+<p style="color: #475569; font-size: 0.8rem; margin-top: 25px;">&copy; 2026 JMS Web Solutions. Todos os direitos reservados.</p>
+</footer>
+<script>
+(function(){
+const menuBtn = document.getElementById('mobile-menu');
+const nav = document.querySelector('.nav-menu');
+menuBtn.addEventListener('click', () => {
+nav.classList.toggle('active');
+menuBtn.children[0].style.transform = nav.classList.contains('active') ? 'rotate(45deg) translate(5px, 6px)' : 'none';
+menuBtn.children[1].style.opacity = nav.classList.contains('active') ? '0' : '1';
+menuBtn.children[2].style.transform = nav.classList.contains('active') ? 'rotate(-45deg) translate(7px, -8px)' : 'none';
+});
+const _0xData = "PHA+Vm9jw6ogasOhIHBhcm91IHBhcmEgYW5hbGlzYXIgbyBjb21wb3J0YW1lbnRvIGRvIHNldSBjbGllbnRlIGhvamU/IEEgZGlzcHV0YSBwZWxhIGF0ZW7Dp8OjbyBhZ29yYSBhY29udGVjZSBlbSB1bWEgdGVsYSBkZSA2IHBvbGVnYWRhcy48L3A+PHA+UXVhbmRvIGFsZ3XDqW0gcHJlY2lzYSBkZSB1bSBzZXJ2acOnbyB1cmdlbnRlLCBhIHByaW1laXJhIHJlYcOnw6NvIMOpIGFicmlyIG8gR29vZ2xlLiBTZSBhIHN1YSBlbXByZXNhIG7Do28gYXBhcmVjZSBhbGksIHBhcmEgbyBtZXJjYWRvIG1vZGVybm8sIDxzdHJvbmc+dm9jw6ogw6kgaW5leGlzdGVudGUuPC9zdHJvbmc+PC9wPjxoMj4xLiBPIEN1c3RvIE9jdWx0byBkYSBJbnZpc2liaWxpZGFkZTwvaDI+PHA+RXN0YXIgZm9yYSBkbyBHb29nbGUgc2lnbmlmaWNhIHF1ZSB2b2PDqiBlc3TDoSA8c3Ryb25nPmF0aXZhbWVudGUgZW52aWFuZG8gc2V1cyBjbGllbnRlcyBwYXJhIGEgY29uY29ycsOqbmNpYS48L3N0cm9uZz4gQ2FkYSBidXNjYSBzZW0gc3VhIHByZXNlbsOnYSBmb3J0YWxlY2UgcXVlbSBqw6EgZXN0w6Egbm8gdG9wby48L3A+PGRpdiBjbGFzcz0iaW5mby1jYXJkIj48aDQ+Vm9jw6ogc2FiaWE/PC9oND48cD5NYWlzIGRlIDgwJSBkYXMgYnVzY2FzIGxvY2FpcyByZXN1bHRhbSBlbSBjb252ZXJzw6NvIGVtIG1lbm9zIGRlIDI0IGhvcmFzLiBPIEdvb2dsZSDDqSB1bWEgcmVkZSBkZSA8c3Ryb25nPmludGVuw6fDo288L3N0cm9uZz4sIG7Do28gYXBlbmFzIGVudHJldGVuaW1lbnRvLjwvcD48L2Rpdj48aDI+Mi4gUG9yIHF1ZSBvIEluc3RhZ3JhbSBuw6NvIMOpIHN1ZmljaWVudGU/PC9oMj48cD5PIEluc3RhZ3JhbSDDqSBpbnRlcnJ1dcOnw6NvOyBvIDxzdHJvbmc+R29vZ2xlPC9zdHJvbmc+IMOpIHNvbHXDp8Ojby4gTm8gYnVzY2Fkb3IsIG8gY2xpZW50ZSBqw6EgdGVtIHVtIHByb2JsZW1hIGUgcXVlciByZXNvbHZlciBhZ29yYS4gVW0gc2l0ZSBwcm9mZXNzaW9uYWwgcG9sZ2EgdG9kb3Mgbm8gbW9tZW50byBleGF0byBkYSBkZWNpc8OjbyBkZSBjb21wcmEuPC9wPg==";
+document.getElementById('protected-content').innerHTML = decodeURIComponent(escape(window.atob(_0xData)));
+document.addEventListener('keydown', function(e) {
+if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c' || e.key === 'p' || e.key === 'i' || e.key === 'j')) e.preventDefault();
+if (e.keyCode === 123) e.preventDefault();
+});
+})();
+</script>
+</body>
+</html>

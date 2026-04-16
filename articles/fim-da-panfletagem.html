@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Fim da Panfletagem: Por que investir no Google é mais barato que papel | JMS Web Solutions</title>
+<link rel="icon" type="image/png" href="https://jmswebsolutions.github.io/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root { --bg: #0b0d11; --card: #161920; --primary: #ff5e14; --whatsapp: #25d366; --text: #f8fafc; --header-h: 80px; }
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; -webkit-user-select: none; user-select: none; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.8; overflow-x: hidden; }
+header { height: var(--header-h); padding: 0 7%; display: flex; justify-content: space-between; align-items: center; background: rgba(11, 13, 17, 0.98); backdrop-filter: blur(12px); position: fixed; top: 0; width: 100%; z-index: 2000; border-bottom: 1px solid #1e293b; }
+.logo { font-weight: 800; font-size: 1.2rem; color: var(--primary); letter-spacing: 1px; text-decoration: none; }
+.nav-menu { display: flex; align-items: center; }
+.nav-menu a { color: var(--text); text-decoration: none; margin-left: 25px; font-size: 0.85rem; font-weight: 600; transition: 0.3s; }
+.nav-menu a:hover { color: var(--primary); }
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 6px; background: none; border: none; z-index: 2100; }
+.hamburger span { width: 28px; height: 2px; background: var(--text); transition: 0.4s; }
+.article-hero { padding: calc(var(--header-h) + 80px) 7% 60px; text-align: center; background: radial-gradient(circle at top, #1e293b 0%, #0b0d11 100%); }
+.category-tag { color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem; margin-bottom: 25px; display: block; }
+.article-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.1; max-width: 1000px; margin: 0 auto; letter-spacing: -1px; }
+.content-wrapper { max-width: 900px; margin: 0 auto; padding: 0 7% 100px; }
+.featured-image { width: 100%; height: clamp(300px, 45vh, 480px); border-radius: 30px; background: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80') center/cover; margin-bottom: 70px; border: 1px solid #334155; box-shadow: 0 30px 60px rgba(0,0,0,0.6); }
+#protected-content { font-size: 1.15rem; color: #cbd5e1; }
+#protected-content h2 { color: #fff; font-size: 2rem; margin: 50px 0 25px; font-weight: 700; border-left: 5px solid var(--primary); padding-left: 25px; }
+.info-card { background: var(--card); border: 1px solid #1e293b; padding: 40px; border-radius: 25px; margin: 50px 0; border-right: 4px solid var(--primary); }
+.final-cta { background: linear-gradient(145deg, #161920 0%, #0b0d11 100%); border: 1px solid #334155; padding: 70px 40px; border-radius: 40px; text-align: center; margin-top: 100px; }
+.btn { background: var(--primary); color: white; padding: 20px 50px; border-radius: 15px; text-decoration: none; font-weight: 800; display: inline-block; transition: 0.4s; margin-top: 35px; text-transform: uppercase; letter-spacing: 1px; }
+.btn:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(255, 94, 20, 0.5); }
+.whatsapp-float { position: fixed; width: 65px; height: 65px; bottom: 40px; right: 40px; background-color: var(--whatsapp); color: #FFF; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 3000; text-decoration: none !important; animation: pulse-green 2s infinite; }
+@keyframes pulse-green { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+footer { padding: 80px 7% 40px; border-top: 1px solid #1e293b; text-align: center; background: #080a0d; }
+@media (max-width: 992px) {
+.hamburger { display: flex; }
+.nav-menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--bg); flex-direction: column; justify-content: center; transition: 0.5s; z-index: 2000; }
+.nav-menu.active { right: 0; }
+.nav-menu a { margin: 20px 0; font-size: 1.4rem; }
+}
+</style>
+</head>
+<body oncontextmenu="return false" onkeydown="return false" ondragstart="return false" onselectstart="return false">
+<header>
+<a href="https://jmswebsolutions.github.io/" class="logo">JMS WEB SOLUTIONS</a>
+<button class="hamburger" id="mobile-menu"><span></span><span></span><span></span></button>
+<nav class="nav-menu" id="nmn">
+<a href="https://jmswebsolutions.github.io/#portfolio">Trabalhos</a>
+<a href="https://jmswebsolutions.github.io/#segmentos">Soluções por Segmento</a>
+<a href="https://jmswebsolutions.github.io/#servicos">O que faço</a>
+<a href="https://jmswebsolutions.github.io/#blog">Blog</a>
+<a href="https://jmswebsolutions.github.io/#sobre">Sobre</a>
+<a href="https://wa.me/5551991345607" style="color:var(--primary);font-weight:bold">Falar no WhatsApp</a>
+</nav>
+</header>
+<a href="https://wa.me/5551991345607" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<section class="article-hero">
+<span class="category-tag">Marketing de Retorno</span>
+<h1>O Fim da Panfletagem: Por que investir no Google é mais barato que papel</h1>
+</section>
+<div class="content-wrapper">
+<div class="featured-image"></div>
+<article id="protected-content"></article>
+<div class="final-cta">
+<h3>Chega de jogar dinheiro no lixo.</h3>
+<p>Comece a investir onde seus clientes realmente estão.</p>
+<a href="https://wa.me/5551991345607" class="btn">Mudar para o Digital Agora</a>
+</div>
+</div>
+<footer>
+<a href="https://jmswebsolutions.github.io/" class="logo">JMS WEB SOLUTIONS</a>
+<p style="color: #475569; font-size: 0.8rem; margin-top: 25px;">&copy; 2026 JMS Web Solutions. Todos os direitos reservados.</p>
+</footer>
+<script>
+(function(){
+const _0xHex = "3c703e566f63c3aa2061696e64612067617374612063656e74656e617320646520726561697320696d7072696d696e646f206d696c686569726f732064652070616e666c65746f7320656d203c7374726f6e673e506f72746f20416c656772653c2f7374726f6e673e3f205061726520756d20706f75636f2065206f6273657276653a207175616e746f732064657373657320706170c3a96973207465726d696e616d206e6f206368c3a36f206f75206e61206c6978656972612073656d20736572656d206c69646f733f3c2f703e3c703e4e61203c7374726f6e673e4a4d532057656220536f6c7574696f6e733c2f7374726f6e673e20616a7564616d6f7320766f63c3aa206120706172652064652022656d70757272617222206520636f6d65c3a7612061207365722022656e636f6e747261646f2220706f72207175656d206a21207175657220636f6d707261722e3c2f703e3c68323e312e20416c63616e636520436972c3ba726769636f3c2f68323e3c703e416f20696e76657374697220656d20716d20736974652c20766f63c3aa206174696e6765206f2070c3ba626c69636f20636572746f2e20456e7175616e746f206f2070616e666c65746f20c3a920656e74726567756520616f20616361736f2c206f20736575207369746520617061726563652065786174616d656e74652070617261207175656d2064696769746f75206f2071756520766f63c3aa2076656e6465206e6f20476f6f676c652e3c2f703e3c64697620636c6173733d22696e666f2d63617264223e3c68343e4661746f205265616c3c2f68343e3c703e4f20637573746f20706f7220636c69656e7465206e6f206469676974616c20636865676120612073657220363025206d656e6f7220646f2071756520656d206dc3ad6469617320662173696361732e20c389206d616973206566696369c3aa6e6369612070617261206f2073657520626f6c736f2e3c2f703e3c2f6469763e3c68323e322e20417469766f205065726d616e656e74653c2f68323e3c703e556d2070616e666c65746f206475726120736567756e646f732e2053657520736974652066756e63696f6e612032346820706f72206469612c20746f646f73206f73206469617320646f20616e6f2e20456c6520c3a9206f20736575206d656c686f722076656e6465646f722c2073656d7072652070726f6e746f207061726120636f6e76657274657220756d207669736974616e746520656d20756d61206d656e736167656d206e6f2057686174734170702e3c2f703e";
+function h2s(h){let s='';for(let i=0;i<h.length;i+=2)s+=String.fromCharCode(parseInt(h.substr(i,2),16));return decodeURIComponent(escape(s));}
+document.getElementById('protected-content').innerHTML = h2s(_0xHex);
+const menuBtn = document.getElementById('mobile-menu');
+const nav = document.getElementById('nmn');
+menuBtn.addEventListener('click', () => {
+nav.classList.toggle('active');
+menuBtn.children[0].style.transform = nav.classList.contains('active') ? 'rotate(45deg) translate(5px, 6px)' : 'none';
+menuBtn.children[1].style.opacity = nav.classList.contains('active') ? '0' : '1';
+menuBtn.children[2].style.transform = nav.classList.contains('active') ? 'rotate(-45deg) translate(7px, -8px)' : 'none';
+});
+document.addEventListener('keydown', (e) => {
+if (e.ctrlKey && (e.key==='u' || e.key==='s' || e.key==='c' || e.key==='p' || e.key==='i') || e.keyCode === 123) {
+e.preventDefault(); return false;
+}
+});
+})();
+</script>
+</body>
+</html>

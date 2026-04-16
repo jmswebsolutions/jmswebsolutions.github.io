@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quanto dinheiro você perde por não aparecer no Google Maps | JMS Web Solutions</title>
+<link rel="icon" type="image/png" href="https://jmswebsolutions.github.io/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root { --bg: #0b0d11; --card: #161920; --primary: #ff5e14; --whatsapp: #25d366; --text: #f8fafc; --header-h: 80px; }
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; -webkit-user-select: none; user-select: none; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.8; overflow-x: hidden; }
+header { height: var(--header-h); padding: 0 7%; display: flex; justify-content: space-between; align-items: center; background: rgba(11, 13, 17, 0.98); backdrop-filter: blur(12px); position: fixed; top: 0; width: 100%; z-index: 2000; border-bottom: 1px solid #1e293b; }
+.logo { font-weight: 800; font-size: 1.2rem; color: var(--primary); letter-spacing: 1px; text-decoration: none; }
+.nav-menu { display: flex; align-items: center; }
+.nav-menu a { color: var(--text); text-decoration: none; margin-left: 25px; font-size: 0.85rem; font-weight: 600; transition: 0.3s; }
+.nav-menu a:hover { color: var(--primary); }
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 6px; background: none; border: none; z-index: 2100; }
+.hamburger span { width: 28px; height: 2px; background: var(--text); transition: 0.4s; }
+.article-hero { padding: calc(var(--header-h) + 80px) 7% 60px; text-align: center; background: radial-gradient(circle at top, #1e293b 0%, #0b0d11 100%); }
+.category-tag { color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem; margin-bottom: 25px; display: block; }
+.article-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.1; max-width: 1000px; margin: 0 auto; letter-spacing: -1px; }
+.content-wrapper { max-width: 900px; margin: 0 auto; padding: 0 7% 100px; }
+.featured-image { width: 100%; height: clamp(300px, 45vh, 480px); border-radius: 30px; background: url('https://images.pexels.com/photos/1036641/pexels-photo-1036641.jpeg?auto=compress&cs=tinysrgb&w=1260') center/cover; margin-bottom: 70px; border: 1px solid #334155; box-shadow: 0 30px 60px rgba(0,0,0,0.6); }
+#protected-content { font-size: 1.15rem; color: #cbd5e1; }
+#protected-content h2 { color: #fff; font-size: 2rem; margin: 50px 0 25px; font-weight: 700; border-left: 5px solid var(--primary); padding-left: 25px; }
+.info-card { background: var(--card); border: 1px solid #1e293b; padding: 40px; border-radius: 25px; margin: 50px 0; border-right: 4px solid var(--primary); }
+.final-cta { background: linear-gradient(145deg, #161920 0%, #0b0d11 100%); border: 1px solid #334155; padding: 70px 40px; border-radius: 40px; text-align: center; margin-top: 100px; }
+.btn { background: var(--primary); color: white; padding: 20px 50px; border-radius: 15px; text-decoration: none; font-weight: 800; display: inline-block; transition: 0.4s; margin-top: 35px; text-transform: uppercase; letter-spacing: 1px; }
+.btn:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(255, 94, 20, 0.5); }
+.whatsapp-float { position: fixed; width: 65px; height: 65px; bottom: 40px; right: 40px; background-color: var(--whatsapp); color: #FFF; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 3000; text-decoration: none !important; animation: pulse-green 2s infinite; }
+@keyframes pulse-green { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+footer { padding: 80px 7% 40px; border-top: 1px solid #1e293b; text-align: center; background: #080a0d; }
+@media (max-width: 992px) {
+.hamburger { display: flex; }
+.nav-menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--bg); flex-direction: column; justify-content: center; transition: 0.5s; z-index: 2000; }
+.nav-menu.active { right: 0; }
+.nav-menu a { margin: 20px 0; font-size: 1.4rem; }
+}
+</style>
+</head>
+<body oncontextmenu="return false" onkeydown="return false" ondragstart="return false" onselectstart="return false">
+<header>
+<a href="https://jmswebsolutions.github.io/" class="logo">JMS WEB SOLUTIONS</a>
+<button class="hamburger" id="mobile-menu"><span></span><span></span><span></span></button>
+<nav class="nav-menu" id="nmn">
+<a href="https://jmswebsolutions.github.io/#portfolio">Trabalhos</a>
+<a href="https://jmswebsolutions.github.io/#segmentos">Soluções por Segmento</a>
+<a href="https://jmswebsolutions.github.io/#servicos">O que faço</a>
+<a href="https://jmswebsolutions.github.io/#blog">Blog</a>
+<a href="https://jmswebsolutions.github.io/#sobre">Sobre</a>
+<a href="https://wa.me/5551991345607" style="color:var(--primary);font-weight:bold">Falar no WhatsApp</a>
+</nav>
+</header>
+<a href="https://wa.me/5551991345607" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<section class="article-hero">
+<span class="category-tag">SEO Local e ROI</span>
+<h1>Quanto dinheiro você perde por não aparecer no Google Maps</h1>
+</section>
+<div class="content-wrapper">
+<div class="featured-image"></div>
+<article id="protected-content"></article>
+<div class="final-cta">
+<h3>Quer descobrir quanto você está deixando de ganhar?</h3>
+<p>Vamos colocar sua empresa no mapa — literalmente. Pare de perder oportunidades e comece a dominar as buscas locais hoje mesmo.</p>
+<a href="https://wa.me/5551991345607" class="btn">Quero meu negócio no Topo do Google</a>
+</div>
+</div>
+<footer>
+<a href="https://jmswebsolutions.github.io/" class="logo">JMS WEB SOLUTIONS</a>
+<p style="color: #475569; font-size: 0.8rem; margin-top: 25px;">&copy; 2026 JMS Web Solutions. Todos os direitos reservados.</p>
+</footer>
+<script>
+(function(){
+const _0xHex = "3c703e566f63c3aa206a612073652070657267756e746f75207175616e746f7320636c69656e74657320646569786172616d206465206c69676172207061726120612073756120656d707265736120686f6a652073696d706c65736d656e746520706f72717565206e636f20746520656e636f6e74726172616d206e6f206d6170613f204e6f206d756e646f20646f73206e6567c3b363696f73206c6f636169732c206f20476f6f676c65204d617073206e636f20c3a9206d61697320756d20226163657373c3b372696f222c20c3a9206f203c7374726f6e673e636f726163... (conteúdo truncado para proteção)";
+const _0xArt = "3c703e566f63c3aa206a612073652070657267756e746f75207175616e746f7320636c69656e74657320646569786172616d206465206c69676172207061726120612073756120656d707265736120686f6a652073696d706c65736d656e746520706f72717565206e636f20746520656e636f6e74726172616d206e6f206d6170613f204e6f206d756e646f20646f73206e6567c3b363696f73206c6f636169732c206f20476f6f676c65204d617073206e636f20c3a9206d61697320756d20226163657373c3b372696f222c20c3a9206f203c7374726f6e673e636f726163c3a36f206461732076656e6461732e3c2f7374726f6e673e3c2f703e3c703e5175616e646f20616c6775c3a96d20656d203c7374726f6e673e506f72746f20416c656772653c2f7374726f6e673e20706573717569736120706f7220756d207365727669c3a76f2022706572746f206465206d696d222c206f20476f6f676c65206578696265206170656e6173207472c3aa7320656d70726573617320656d2064657374617175652e3c2f703e3c68323e312e204f2043c3a16c63756c6f20646f204c7563726f20496e7669736976656c3c2f68323e3c703e4170617265636572206e6f20476f6f676c65204d617073206765726120636c697175657320646520616c746120636f6e7665727363c3a36f2e205365206f20736575207469636b6574206dc3a964696f2063206465205224203530302c3030206520766f63c3aa207065726465203220636c69656e74657320706f722073656d616e612c2066616c616d6f73206465203c7374726f6e673e522420342e3030302c303020706f72206dc3aa732e3c2f7374726f6e673e3c2f703e3c64697620636c6173733d22696e666f2d63617264223e3c68343e4573746174c3ad7374696361205265616c3c2f68343e3c703e4365726361206465203736252064617320706573736f6173207175652070657371756973616d20616c676f207072c3b378696d6f207669736974616d20756d6120656d707265736120656d206174c3a920323420686f7261732e3c2f703e3c2f6469763e3c68323e322e204120506f6e746520656e747265206f204d6170732065206f2073657520536974653c2f68323e3c703e4f20476f6f676c65204d617073206e636f2074726162616c686120736f7a696e686f2e2050617261207375626972206e6f2072616e6b696e672c206f206275736361646f7220707265636973612064652073696e61697320646520636f6e6669616ec3a7612e20c38920617175692071756520656e7472612061203c7374726f6e673e4a4d532057656220536f6c7574696f6e732e3c2f7374726f6e673e3c2f703e3c64697620636c6173733d22696e666f2d63617264223e3c68343e4f205365677265646f20646f2052616e6b696e67204c6f63616c3c2f68343e3c703e4f20476f6f676c6520616e616c69736120612064697374c3a26e6369612c20612072656c6576c3a26e6369612065206f2064657374617175652e204e6f7320636f6e6669677572616d6f732065737365732073696e616973206e612065737472757475726120646f207365752063c3b36469676f2e3c2f703e3c2f6469763e";
+function h2s(h){let s='';for(let i=0;i<h.length;i+=2)s+=String.fromCharCode(parseInt(h.substr(i,2),16));return decodeURIComponent(escape(s));}
+document.getElementById('protected-content').innerHTML = h2s(_0xArt);
+const menuBtn = document.getElementById('mobile-menu');
+const nav = document.getElementById('nmn');
+menuBtn.addEventListener('click', () => {
+nav.classList.toggle('active');
+menuBtn.children[0].style.transform = nav.classList.contains('active') ? 'rotate(45deg) translate(5px, 6px)' : 'none';
+menuBtn.children[1].style.opacity = nav.classList.contains('active') ? '0' : '1';
+menuBtn.children[2].style.transform = nav.classList.contains('active') ? 'rotate(-45deg) translate(7px, -8px)' : 'none';
+});
+document.addEventListener('keydown', (e) => {
+if (e.ctrlKey && (e.key==='u' || e.key==='s' || e.key==='c' || e.key==='p' || e.key==='i') || e.keyCode === 123) {
+e.preventDefault(); return false;
+}
+});
+})();
+</script>
+</body>
+</html>

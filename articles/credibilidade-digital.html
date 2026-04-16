@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credibilidade Digital: Por que um site profissional fecha mais contratos | JMS Web Solutions</title>
+<link rel="icon" type="image/png" href="https://jmswebsolutions.github.io/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root { --bg: #0b0d11; --card: #161920; --primary: #ff5e14; --whatsapp: #25d366; --text: #f8fafc; --header-h: 80px; }
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; -webkit-user-select: none; user-select: none; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.8; overflow-x: hidden; }
+header { height: var(--header-h); padding: 0 7%; display: flex; justify-content: space-between; align-items: center; background: rgba(11, 13, 17, 0.98); backdrop-filter: blur(12px); position: fixed; top: 0; width: 100%; z-index: 2000; border-bottom: 1px solid #1e293b; }
+.logo { font-weight: 800; font-size: 1.2rem; color: var(--primary); letter-spacing: 1px; text-decoration: none; }
+.nav-menu { display: flex; align-items: center; }
+.nav-menu a { color: var(--text); text-decoration: none; margin-left: 25px; font-size: 0.85rem; font-weight: 600; transition: 0.3s; }
+.nav-menu a:hover { color: var(--primary); }
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 6px; background: none; border: none; z-index: 2100; }
+.hamburger span { width: 28px; height: 2px; background: var(--text); transition: 0.4s; }
+.article-hero { padding: calc(var(--header-h) + 80px) 7% 60px; text-align: center; background: radial-gradient(circle at top, #1e293b 0%, #0b0d11 100%); }
+.category-tag { color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem; margin-bottom: 25px; display: block; }
+.article-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.1; max-width: 1000px; margin: 0 auto; letter-spacing: -1px; }
+.content-wrapper { max-width: 900px; margin: 0 auto; padding: 0 7% 100px; }
+.featured-image { width: 100%; height: clamp(300px, 45vh, 480px); border-radius: 30px; background: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80') center/cover; margin-bottom: 70px; border: 1px solid #334155; box-shadow: 0 30px 60px rgba(0,0,0,0.6); }
+#protected-content { font-size: 1.15rem; color: #cbd5e1; }
+#protected-content h2 { color: #fff; font-size: 2rem; margin: 50px 0 25px; font-weight: 700; border-left: 5px solid var(--primary); padding-left: 25px; }
+.info-card { background: var(--card); border: 1px solid #1e293b; padding: 40px; border-radius: 25px; margin: 50px 0; border-right: 4px solid var(--primary); }
+.final-cta { background: linear-gradient(145deg, #161920 0%, #0b0d11 100%); border: 1px solid #334155; padding: 70px 40px; border-radius: 40px; text-align: center; margin-top: 100px; }
+.btn { background: var(--primary); color: white; padding: 20px 50px; border-radius: 15px; text-decoration: none; font-weight: 800; display: inline-block; transition: 0.4s; margin-top: 35px; text-transform: uppercase; letter-spacing: 1px; }
+.btn:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(255, 94, 20, 0.5); }
+.whatsapp-float { position: fixed; width: 65px; height: 65px; bottom: 40px; right: 40px; background-color: var(--whatsapp); color: #FFF; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 3000; text-decoration: none !important; animation: pulse-green 2s infinite; }
+@keyframes pulse-green { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+footer { padding: 80px 7% 40px; border-top: 1px solid #1e293b; text-align: center; background: #080a0d; }
+@media (max-width: 992px) {
+.hamburger { display: flex; }
+.nav-menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--bg); flex-direction: column; justify-content: center; transition: 0.5s; z-index: 2000; }
+.nav-menu.active { right: 0; }
+.nav-menu a { margin: 20px 0; font-size: 1.4rem; }
+}
+</style>
+</head>
+<body oncontextmenu="return false" onkeydown="return false" ondragstart="return false" onselectstart="return false">
+<header>
+<a href="https://jmswebsolutions.github.io/" class="logo">JMS WEB SOLUTIONS</a>
+<button class="hamburger" id="mobile-menu"><span></span><span></span><span></span></button>
+<nav class="nav-menu" id="nmn">
+<a href="https://jmswebsolutions.github.io/#portfolio">Trabalhos</a>
+<a href="https://jmswebsolutions.github.io/#segmentos">Soluções por Segmento</a>
+<a href="https://jmswebsolutions.github.io/#servicos">O que faço</a>
+<a href="https://jmswebsolutions.github.io/#blog">Blog</a>
+<a href="https://jmswebsolutions.github.io/#sobre">Sobre</a>
+<a href="https://wa.me/5551991345607" style="color:var(--primary);font-weight:bold">Falar no WhatsApp</a>
+</nav>
+</header>
+<a href="https://wa.me/5551991345607" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<section class="article-hero">
+<span class="category-tag">Autoridade Online</span>
+<h1>Credibilidade Digital: Por que um site profissional fecha mais contratos</h1>
+</section>
+<div class="content-wrapper">
+<div class="featured-image"></div>
+<article id="protected-content"></article>
+<div class="final-cta">
+<h3>Sua empresa merece ser levada a sério.</h3>
+<p>Pare de perder contratos por falta de presença oficial. Vamos profissionalizar sua imagem digital hoje mesmo.</p>
+<a href="https://wa.me/5551991345607" class="btn">Profissionalizar meu Negócio</a>
+</div>
+</div>
+<footer>
+<a href="https://jmswebsolutions.github.io/" class="logo">JMS WEB SOLUTIONS</a>
+<p style="color: #475569; font-size: 0.8rem; margin-top: 25px;">&copy; 2026 JMS Web Solutions. Todos os direitos reservados.</p>
+</footer>
+<script>
+(function(){
+const _0xHex = "3c703e496d6167696e652071756520766f63c3aa20657374c3a12070726573746520612066656368617220756d20636f6e747261746f206465203c7374726f6e673e522420352e3030302c30303c2f7374726f6e673e2e20566f63c3aa2072656365626520647561732070726f706f737461733a20756d612076656d20646520756d20652d6d61696c20677261747569746f3b2061206f757472612076656d20646520756d20646f6dc3ad6e696f206f66696369616c2e205175616c207472616e736d697465206d616963207365677572616ec3a7613f3c2f703e3c703e53756120696d6167656d206e6120696e7465726e657420646566696e65206f20707265c3a76f2071756520766f63c3aa20706f646520636f627261722e20536520766f63c3aa207365206170726573656e746120636f6d6e6f20756d20616d61646f722e206f20636c69656e7465207661692062617267616e68617220636164612063656e7461766f2e3c2f703e3c68323e312e204f2046696d20646f20225175656872612d47616c686f223c2f68323e3c703e4d756974617320656d70726573617320656d203c7374726f6e673e506f72746f20416c656772653c2f7374726f6e673e20646570656e64656d206170656e617320646520726564657320736f63696169732e204f2070726f626c656d613f20566f63c3aa206e636f20c3a920646f6e6f20646f20496e7374616772616d2e20556d20736974652070726f66697373696f6e616c20636f6d20646f6dc3ad6e696f207072c3b37072696f20c3a9206120737561202273656465206469676974616c222e3c2f703e3c64697620636c6173733d22696e666f2d63617264223e3c68343e41205265677261206465204f75726f3c2f68343e3c703e436c69656e74657320646520616c746f207469636b65742062757363616d20706172636569726f7320657374c3a1766569732e20556d20652d6d61696c20706572736f6e616c697a61646f206520756d20736974652072c3a17069646f206d6f737472616d2071756520766f63c3aa20696e7665737465206e6120737561207072c3b370726961206573747275747572612c20676572616e646f20636f6e6669616ec3a76120696d6564696174612e3c2f703e3c2f6469763e3c68323e322e2050726f66697373696f6e616c69736d6f20676572612056616c6f722050657263656269646f3c2f68323e3c703e436f6d20756d20736974652062656d20657374727574757261646f2070656c61203c7374726f6e673e4a4d532057656220536f6c7574696f6e733c2f7374726f6e673e2c20766f63c3aa20636f6e737472c3ba69206175746f7269646164652e204973736f207065726d6974652071756520766f63c3aa207061726520646520636f6d70657469722070656c6f206d656e6f7220707265c3a76f206520636f6d65c3a765206120736572206573636f6c6869646f2070656c61207175616c69646164652065207365726965646164652e3c2f703e";
+function h2s(h){let s='';for(let i=0;i<h.length;i+=2)s+=String.fromCharCode(parseInt(h.substr(i,2),16));return decodeURIComponent(escape(s));}
+document.getElementById('protected-content').innerHTML = h2s(_0xHex);
+const menuBtn = document.getElementById('mobile-menu');
+const nav = document.getElementById('nmn');
+menuBtn.addEventListener('click', () => {
+nav.classList.toggle('active');
+menuBtn.children[0].style.transform = nav.classList.contains('active') ? 'rotate(45deg) translate(5px, 6px)' : 'none';
+menuBtn.children[1].style.opacity = nav.classList.contains('active') ? '0' : '1';
+menuBtn.children[2].style.transform = nav.classList.contains('active') ? 'rotate(-45deg) translate(7px, -8px)' : 'none';
+});
+document.addEventListener('keydown', (e) => {
+if (e.ctrlKey && (e.key==='u' || e.key==='s' || e.key==='c' || e.key==='p' || e.key==='i') || e.keyCode === 123) {
+e.preventDefault(); return false;
+}
+});
+})();
+</script>
+</body>
+</html>
