@@ -1,2 +1,0 @@
-# RelogioInterativoJS
-![](image.jpg)

@@ -1,2 +1,0 @@
-# SliderJS
-![](image.jpg)

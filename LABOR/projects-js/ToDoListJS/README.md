@@ -1,2 +1,0 @@
-# ToDoListJS
-![](image.jpg)

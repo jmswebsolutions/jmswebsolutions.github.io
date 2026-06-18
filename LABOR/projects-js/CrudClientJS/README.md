@@ -1,2 +1,0 @@
-# CrudClientJS
-![](image.jpg)

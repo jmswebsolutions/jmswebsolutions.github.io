@@ -1,2 +1,0 @@
-# BateriaTecladoJS
-![](image.jpg) 

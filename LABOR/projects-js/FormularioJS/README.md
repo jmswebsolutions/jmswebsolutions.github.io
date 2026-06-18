@@ -1,2 +1,0 @@
-# FormularioJS
-![](image.jpg)
